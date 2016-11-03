@@ -1,0 +1,6 @@
+C:\Eintern\1602-22\RegistrationApp\model\bin\Debug\model.dll.config
+C:\Eintern\1602-22\RegistrationApp\model\bin\Debug\model.dll
+C:\Eintern\1602-22\RegistrationApp\model\bin\Debug\model.pdb
+C:\Eintern\1602-22\RegistrationApp\model\obj\Debug\model.csprojResolveAssemblyReference.cache
+C:\Eintern\1602-22\RegistrationApp\model\obj\Debug\model.dll
+C:\Eintern\1602-22\RegistrationApp\model\obj\Debug\model.pdb

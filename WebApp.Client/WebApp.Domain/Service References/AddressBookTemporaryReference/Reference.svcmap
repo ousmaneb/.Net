@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ffd0a05f-4714-4b73-b011-da6762590319" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:61528/AddressBook.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AddressBook.disco" MetadataType="Disco" ID="713fb90b-e6ab-485f-b1b4-7171759a0348" SourceId="1" SourceUrl="http://localhost:61528/AddressBook.svc?disco" />
+    <MetadataFile FileName="AddressBook.xsd" MetadataType="Schema" ID="cdb1a1f5-de80-4602-bbf8-b0da0c673b04" SourceId="1" SourceUrl="http://localhost:61528/AddressBook.svc?xsd=xsd0" />
+    <MetadataFile FileName="AddressBook1.xsd" MetadataType="Schema" ID="f8e8555c-d74a-40bd-8a28-04839e5ddd9f" SourceId="1" SourceUrl="http://localhost:61528/AddressBook.svc?xsd=xsd2" />
+    <MetadataFile FileName="AddressBook2.xsd" MetadataType="Schema" ID="1d90d22e-668e-476a-a786-fa8a71c0d388" SourceId="1" SourceUrl="http://localhost:61528/AddressBook.svc?xsd=xsd1" />
+    <MetadataFile FileName="AddressBook.wsdl" MetadataType="Wsdl" ID="58499b85-dcc1-46ae-87ec-1a4eab13dfe4" SourceId="1" SourceUrl="http://localhost:61528/AddressBook.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

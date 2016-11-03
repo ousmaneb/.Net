@@ -1,0 +1,5 @@
+C:\Eintern\1602-22\PalindromeApp\PalindromeApp.Domain\bin\Debug\PalindromeApp.Domain.dll
+C:\Eintern\1602-22\PalindromeApp\PalindromeApp.Domain\bin\Debug\PalindromeApp.Domain.pdb
+C:\Eintern\1602-22\PalindromeApp\PalindromeApp.Domain\obj\Debug\PalindromeApp.Domain.dll
+C:\Eintern\1602-22\PalindromeApp\PalindromeApp.Domain\obj\Debug\PalindromeApp.Domain.pdb
+C:\Eintern\1602-22\PalindromeApp\PalindromeApp.Domain\obj\Debug\PalindromeApp.Domain.csprojResolveAssemblyReference.cache

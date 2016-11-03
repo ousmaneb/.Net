@@ -1,0 +1,6 @@
+C:\Eintern\1602-22\WebbApp\WebApp.Domain\bin\Debug\WebApp.Domain.dll.config
+C:\Eintern\1602-22\WebbApp\WebApp.Domain\bin\Debug\WebApp.Domain.dll
+C:\Eintern\1602-22\WebbApp\WebApp.Domain\bin\Debug\WebApp.Domain.pdb
+C:\Eintern\1602-22\WebbApp\WebApp.Domain\obj\Debug\WebApp.Domain.csprojResolveAssemblyReference.cache
+C:\Eintern\1602-22\WebbApp\WebApp.Domain\obj\Debug\WebApp.Domain.dll
+C:\Eintern\1602-22\WebbApp\WebApp.Domain\obj\Debug\WebApp.Domain.pdb

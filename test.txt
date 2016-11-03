@@ -1,0 +1,12 @@
+/*
+Objective: 
+Write a function with the given signature 
+that will take a sorted array of integers 
+*/
+and return the array compacted. That is, 
+given an array containing: 1, 2, 6, 8, 8, 8, 9, 10, 10, 
+when the function returns, the contents of the array 
+should be: 1, 2, 6, 8, 9, 10.
+
+Restrictions:
+Cannot use Distinct method

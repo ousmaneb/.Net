@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApp.Client.Site" %>
+<%@ Register Src="~/Controls/Login.ascx" TagPrefix="fred" TagName="login" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+  </head>
+
+  <body>
+    <form id="form1" runat="server">
+      <asp:ScriptManager runat="server" ID="script_manager"></asp:ScriptManager>
+      <div>
+        <asp:Label runat="server" ID="header_lbl" Font-Size="XX-Large">Address Book</asp:Label>
+        <fred:login runat="server" />
+      </div>
+
+      <div>
+        <asp:ContentPlaceHolder ID="PageViewHolder" runat="server"></asp:ContentPlaceHolder>
+      </div>
+    </form>
+  </body>
+</html>

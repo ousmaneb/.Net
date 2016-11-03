@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AddressBook" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/wcfapp/AddressBook.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/wcfapp/AddressBook.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/wcfapp/AddressBook.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfApp.Client.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAddressBook_AddContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddContact" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_AddContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_AddContactTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddContactTask" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_AddContactTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddContactTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_UpdateContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContact" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_UpdateContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_UpdateContactTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContactTask" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_UpdateContactTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContactTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_GetContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContact" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_GetContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_GetContactTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactTask" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_GetContactTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_DeleteContactById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContactById" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_DeleteContactById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContactByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_DeleteContactByIdTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContactByIdTask" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_DeleteContactByIdTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContactByIdTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_DeleteContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContact" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_DeleteContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_DeleteContactTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContactTask" />
+  </wsdl:message>
+  <wsdl:message name="IAddressBook_DeleteContactTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContactTaskResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAddressBook">
+    <wsdl:operation name="AddContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressBook/AddContact" message="tns:IAddressBook_AddContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressBook/AddContactResponse" message="tns:IAddressBook_AddContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddContactTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressBook/AddContactTask" message="tns:IAddressBook_AddContactTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressBook/AddContactTaskResponse" message="tns:IAddressBook_AddContactTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressBook/UpdateContact" message="tns:IAddressBook_UpdateContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressBook/UpdateContactResponse" message="tns:IAddressBook_UpdateContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContactTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressBook/UpdateContactTask" message="tns:IAddressBook_UpdateContactTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressBook/UpdateContactTaskResponse" message="tns:IAddressBook_UpdateContactTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressBook/GetContact" message="tns:IAddressBook_GetContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressBook/GetContactResponse" message="tns:IAddressBook_GetContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContactTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressBook/GetContactTask" message="tns:IAddressBook_GetContactTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressBook/GetContactTaskResponse" message="tns:IAddressBook_GetContactTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContactById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressBook/DeleteContactById" message="tns:IAddressBook_DeleteContactById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressBook/DeleteContactByIdResponse" message="tns:IAddressBook_DeleteContactById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContactByIdTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressBook/DeleteContactByIdTask" message="tns:IAddressBook_DeleteContactByIdTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressBook/DeleteContactByIdTaskResponse" message="tns:IAddressBook_DeleteContactByIdTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressBook/DeleteContact" message="tns:IAddressBook_DeleteContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressBook/DeleteContactResponse" message="tns:IAddressBook_DeleteContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContactTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAddressBook/DeleteContactTask" message="tns:IAddressBook_DeleteContactTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAddressBook/DeleteContactTaskResponse" message="tns:IAddressBook_DeleteContactTask_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAddressBook" type="tns:IAddressBook">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddContact">
+      <soap:operation soapAction="http://tempuri.org/IAddressBook/AddContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContactTask">
+      <soap:operation soapAction="http://tempuri.org/IAddressBook/AddContactTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContact">
+      <soap:operation soapAction="http://tempuri.org/IAddressBook/UpdateContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContactTask">
+      <soap:operation soapAction="http://tempuri.org/IAddressBook/UpdateContactTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContact">
+      <soap:operation soapAction="http://tempuri.org/IAddressBook/GetContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContactTask">
+      <soap:operation soapAction="http://tempuri.org/IAddressBook/GetContactTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContactById">
+      <soap:operation soapAction="http://tempuri.org/IAddressBook/DeleteContactById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContactByIdTask">
+      <soap:operation soapAction="http://tempuri.org/IAddressBook/DeleteContactByIdTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContact">
+      <soap:operation soapAction="http://tempuri.org/IAddressBook/DeleteContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContactTask">
+      <soap:operation soapAction="http://tempuri.org/IAddressBook/DeleteContactTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AddressBook">
+    <wsdl:port name="BasicHttpBinding_IAddressBook" binding="tns:BasicHttpBinding_IAddressBook">
+      <soap:address location="http://localhost/wcfapp/AddressBook.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

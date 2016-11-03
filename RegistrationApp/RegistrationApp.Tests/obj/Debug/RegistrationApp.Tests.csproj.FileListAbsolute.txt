@@ -1,0 +1,10 @@
+C:\Eintern\1602-22\RegistrationApp\RegistrationApp.Tests\bin\Debug\RegistrationApp.Tests.dll
+C:\Eintern\1602-22\RegistrationApp\RegistrationApp.Tests\bin\Debug\RegistrationApp.Tests.pdb
+C:\Eintern\1602-22\RegistrationApp\RegistrationApp.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Eintern\1602-22\RegistrationApp\RegistrationApp.Tests\bin\Debug\RegistrationApp.Domain.dll
+C:\Eintern\1602-22\RegistrationApp\RegistrationApp.Tests\bin\Debug\RegistrationApp.exe
+C:\Eintern\1602-22\RegistrationApp\RegistrationApp.Tests\bin\Debug\RegistrationApp.Domain.pdb
+C:\Eintern\1602-22\RegistrationApp\RegistrationApp.Tests\bin\Debug\RegistrationApp.pdb
+C:\Eintern\1602-22\RegistrationApp\RegistrationApp.Tests\obj\Debug\RegistrationApp.Tests.csprojResolveAssemblyReference.cache
+C:\Eintern\1602-22\RegistrationApp\RegistrationApp.Tests\obj\Debug\RegistrationApp.Tests.dll
+C:\Eintern\1602-22\RegistrationApp\RegistrationApp.Tests\obj\Debug\RegistrationApp.Tests.pdb

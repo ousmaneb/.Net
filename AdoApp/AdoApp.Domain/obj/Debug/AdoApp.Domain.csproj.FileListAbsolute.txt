@@ -1,0 +1,7 @@
+C:\Eintern\1602-22\AdoApp\AdoApp.Domain\bin\Debug\AdoApp.Domain.dll
+C:\Eintern\1602-22\AdoApp\AdoApp.Domain\bin\Debug\AdoApp.Domain.pdb
+C:\Eintern\1602-22\AdoApp\AdoApp.Domain\bin\Debug\AdoApp.Data.dll
+C:\Eintern\1602-22\AdoApp\AdoApp.Domain\bin\Debug\AdoApp.Data.pdb
+C:\Eintern\1602-22\AdoApp\AdoApp.Domain\obj\Debug\AdoApp.Domain.csprojResolveAssemblyReference.cache
+C:\Eintern\1602-22\AdoApp\AdoApp.Domain\obj\Debug\AdoApp.Domain.dll
+C:\Eintern\1602-22\AdoApp\AdoApp.Domain\obj\Debug\AdoApp.Domain.pdb

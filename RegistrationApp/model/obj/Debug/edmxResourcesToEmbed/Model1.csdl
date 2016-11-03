@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Students" EntityType="Model1.Student" />
+    <EntitySet Name="Courses" EntityType="Model1.Course" />
+    <EntitySet Name="ScheduledClasses" EntityType="Model1.ScheduledClass" />
+    <EntitySet Name="StudentSchedules" EntityType="Model1.StudentSchedule" />
+    <AssociationSet Name="ScheduledClassCourse" Association="Model1.ScheduledClassCourse">
+      <End Role="ScheduledClass" EntitySet="ScheduledClasses" />
+      <End Role="Course" EntitySet="Courses" />
+    </AssociationSet>
+    <AssociationSet Name="StudentStudentSchedule" Association="Model1.StudentStudentSchedule">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="StudentSchedule" EntitySet="StudentSchedules" />
+    </AssociationSet>
+    <AssociationSet Name="StudentScheduleScheduledClass" Association="Model1.StudentScheduleScheduledClass">
+      <End Role="StudentSchedule" EntitySet="StudentSchedules" />
+      <End Role="ScheduledClass" EntitySet="ScheduledClasses" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Course">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Duration" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ScheduledClass">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Starttime" Type="String" Nullable="false" />
+    <NavigationProperty Name="Course" Relationship="Model1.ScheduledClassCourse" FromRole="ScheduledClass" ToRole="Course" />
+  </EntityType>
+  <EntityType Name="StudentSchedule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <NavigationProperty Name="Student" Relationship="Model1.StudentStudentSchedule" FromRole="StudentSchedule" ToRole="Student" />
+    <NavigationProperty Name="ScheduledClass" Relationship="Model1.StudentScheduleScheduledClass" FromRole="StudentSchedule" ToRole="ScheduledClass" />
+  </EntityType>
+  <Association Name="ScheduledClassCourse">
+    <End Type="Model1.ScheduledClass" Role="ScheduledClass" Multiplicity="*" />
+    <End Type="Model1.Course" Role="Course" Multiplicity="1" />
+  </Association>
+  <Association Name="StudentStudentSchedule">
+    <End Type="Model1.Student" Role="Student" Multiplicity="1" />
+    <End Type="Model1.StudentSchedule" Role="StudentSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="StudentSchedule">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StudentScheduleScheduledClass">
+    <End Type="Model1.StudentSchedule" Role="StudentSchedule" Multiplicity="*" />
+    <End Type="Model1.ScheduledClass" Role="ScheduledClass" Multiplicity="1" />
+  </Association>
+</Schema>

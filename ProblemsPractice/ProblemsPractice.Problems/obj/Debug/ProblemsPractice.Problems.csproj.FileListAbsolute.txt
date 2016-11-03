@@ -1,0 +1,6 @@
+C:\Eintern\1602-22\ProblemsPractice\ProblemsPractice.Problems\obj\Debug\ProblemsPractice.Problems.csprojResolveAssemblyReference.cache
+C:\Eintern\1602-22\ProblemsPractice\ProblemsPractice.Problems\bin\Debug\ProblemsPractice.Problems.exe.config
+C:\Eintern\1602-22\ProblemsPractice\ProblemsPractice.Problems\bin\Debug\ProblemsPractice.Problems.exe
+C:\Eintern\1602-22\ProblemsPractice\ProblemsPractice.Problems\bin\Debug\ProblemsPractice.Problems.pdb
+C:\Eintern\1602-22\ProblemsPractice\ProblemsPractice.Problems\obj\Debug\ProblemsPractice.Problems.exe
+C:\Eintern\1602-22\ProblemsPractice\ProblemsPractice.Problems\obj\Debug\ProblemsPractice.Problems.pdb

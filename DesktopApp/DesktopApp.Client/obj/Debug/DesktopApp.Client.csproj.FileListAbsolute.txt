@@ -1,0 +1,14 @@
+C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\bin\Debug\DesktopApp.Client.exe.config
+C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\bin\Debug\DesktopApp.Client.exe
+C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\bin\Debug\DesktopApp.Client.pdb
+C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client.csprojResolveAssemblyReference.cache
+C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\obj\Debug\MainWindow.g.cs
+C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\obj\Debug\App.g.cs
+C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client_MarkupCompile.cache
+C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client_MarkupCompile.lref
+C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\obj\Debug\MainWindow.baml
+C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client.g.resources
+C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client.Properties.Resources.resources
+C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client.csproj.GenerateResource.Cache
+C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client.exe
+C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client.pdb

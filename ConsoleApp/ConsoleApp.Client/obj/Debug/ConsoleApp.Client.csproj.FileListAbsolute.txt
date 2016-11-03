@@ -1,0 +1,8 @@
+C:\Eintern\1602-22\ConsoleApp\ConsoleApp.Client\bin\Debug\ConsoleApp.Client.exe.config
+C:\Eintern\1602-22\ConsoleApp\ConsoleApp.Client\bin\Debug\ConsoleApp.Client.exe
+C:\Eintern\1602-22\ConsoleApp\ConsoleApp.Client\bin\Debug\ConsoleApp.Client.pdb
+C:\Eintern\1602-22\ConsoleApp\ConsoleApp.Client\obj\Debug\ConsoleApp.Client.csprojResolveAssemblyReference.cache
+C:\Eintern\1602-22\ConsoleApp\ConsoleApp.Client\obj\Debug\ConsoleApp.Client.exe
+C:\Eintern\1602-22\ConsoleApp\ConsoleApp.Client\obj\Debug\ConsoleApp.Client.pdb
+C:\Eintern\1602-22\ConsoleApp\ConsoleApp.Client\bin\Debug\ConsoleApp.Domain.dll
+C:\Eintern\1602-22\ConsoleApp\ConsoleApp.Client\bin\Debug\ConsoleApp.Domain.pdb

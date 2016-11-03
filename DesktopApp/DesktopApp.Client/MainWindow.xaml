@@ -1,0 +1,19 @@
+﻿<Window x:Class="DesktopApp.Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopApp.Client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid x:Name="book">
+    <Label x:Name="label" Content="First Name&#xD;&#xA;" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.221,0.404"/>
+    <TextBox x:Name="FirstName_txt" HorizontalAlignment="Left" Height="23" Margin="25,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+    <Label x:Name="label1" Content="Last Name&#xD;&#xA;" HorizontalAlignment="Left" Margin="22,69,0,0" VerticalAlignment="Top"/>
+    <TextBox x:Name="LastName_txt" HorizontalAlignment="Left" Height="23" Margin="25,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+    <Label x:Name="label2" Content="Phone Number&#xD;&#xA;" HorizontalAlignment="Left" Margin="21,148,0,0" VerticalAlignment="Top"/>
+    <TextBox x:Name="PhoneNumber_txt" HorizontalAlignment="Left" Height="23" Margin="25,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+    <Button x:Name="add_button" Content="Add Phone" HorizontalAlignment="Left" Margin="21,220,0,0" VerticalAlignment="Top" Width="139" Click="add_button_Click" Height="39"/>
+
+  </Grid>
+</Window>

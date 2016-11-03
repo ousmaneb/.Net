@@ -1,0 +1,36 @@
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\bin\Debug\AdoApp.Client.exe.config
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\bin\Debug\AdoApp.Client.exe
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\bin\Debug\AdoApp.Client.pdb
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\bin\Debug\AdoApp.Data.dll
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\bin\Debug\AdoApp.Domain.dll
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\bin\Debug\AdoApp.Data.pdb
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\bin\Debug\AdoApp.Domain.pdb
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\obj\Debug\AdoApp.Client.csprojResolveAssemblyReference.cache
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\obj\Debug\MainWindow.g.cs
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\obj\Debug\App.g.cs
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\obj\Debug\AdoApp.Client_MarkupCompile.cache
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\obj\Debug\AdoApp.Client_MarkupCompile.lref
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\obj\Debug\MainWindow.baml
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\obj\Debug\AdoApp.Client.g.resources
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\obj\Debug\AdoApp.Client.Properties.Resources.resources
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\obj\Debug\AdoApp.Client.csproj.GenerateResource.Cache
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\obj\Debug\AdoApp.Client.exe
+C:\Eintern\1602-22\AdoApp\AdoApp.Client\obj\Debug\AdoApp.Client.pdb
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\bin\Debug\AdoApp.Client.exe.config
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\obj\Debug\AdoApp.Client.exe
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\obj\Debug\AdoApp.Client.pdb
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\bin\Debug\AdoApp.Client.exe
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\bin\Debug\AdoApp.Client.pdb
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\bin\Debug\AdoApp.Data.dll
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\bin\Debug\AdoApp.Domain.dll
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\bin\Debug\AdoApp.Data.pdb
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\bin\Debug\AdoApp.Domain.pdb
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\obj\Debug\AdoApp.Client.csprojResolveAssemblyReference.cache
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\obj\Debug\MainWindow.g.cs
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\obj\Debug\App.g.cs
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\obj\Debug\AdoApp.Client_MarkupCompile.cache
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\obj\Debug\AdoApp.Client_MarkupCompile.lref
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\obj\Debug\MainWindow.baml
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\obj\Debug\AdoApp.Client.g.resources
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\obj\Debug\AdoApp.Client.Properties.Resources.resources
+C:\Eintern\1602-22\AdoApp - Copy\AdoApp.Client\obj\Debug\AdoApp.Client.csproj.GenerateResource.Cache
