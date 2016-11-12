@@ -326,13 +326,13 @@ namespace Project1
     public int[] array_multiple10(int [] arr)
     {
       int l = arr.Length;
-      for (int i = 1; i < l; i++)
+      int n = -1;
+      for (int i = 0; i < l; i++)
       {
-        while(arr[i]%10==0)
-        {
-          arr[i] = arr[i + 1];
-          i++;
-        }
+        if (arr[i] % 10 == 0)
+          n = arr[i];
+        else if (n != -1)
+          arr[i] = n;
       }
 
       return arr;
@@ -340,7 +340,18 @@ namespace Project1
 
 
     //Exercise 19
-
+    public int[] array_alone(int[] s, int n)
+    {
+      for (int i = 1; i < s.Length - 1; i++)
+      {
+        if (s[i] == n)
+        {
+          if (s[i - 1] != n && s[i + 1] != n)
+            s[i] = (s[i - 1] > s[i + 1]) ? s[i - 1] : s[i + 1];
+        }
+      }
+      return s;
+    }
 
     //Exercise 20
     public string string_yield(string s)
@@ -407,15 +418,242 @@ namespace Project1
       int count = 0;
       int l = s.Length;
       
-      for (int i=0; i<l; i++)
+      if (s.Length == 1 && s[0]=='h')
       {
-        if (s == "hi")
+        count = 0;
+      }
+      else
+      {
+        for (int i = 0; i < l; i++)
+        {
+          if (s[i] == 'h' && s[i+1]=='i')
+          {
+            count++;
+          }
+        }
+      }
+  
+      return count;
+    }
+
+
+    //Exercise 27
+
+    
+  public int string_nbCode(string s)
+  {
+      int count = 0;
+      int i = 0;
+      int l = s.Length - 3;
+
+      while (i < l)
+      {
+        if (s[i] == 'c' && s[i + 1] == 'o' && s[i + 3] == 'e')
         {
           count++;
+          i += 4;
         }
+        else
+          i++;
+      }
 
+      return count;
+    }
+
+
+
+      //Exercise 28
+    public bool string_appear(String s1, String s2)
+    {
+      int l1 = s1.Length;
+      int l2 = s2.Length;
+      String end;
+      String temp;
+      s1 = s1.ToLower();
+      s2 = s2.ToLower();
+      if (l1 >= l2)
+      {
+        end = s1.Substring(l1 - l2);
+        temp = s2;
+      }
+      else
+      {
+        end = s2.Substring(l2 - l1);
+        temp = s1;
+      }
+      return (end.Equals(temp));
+    }
+
+    //Exercise 29
+    public bool string_xyz(String s)
+    {
+      int l = s.Length;
+      int mid;
+
+
+      if (l < 3)
+        return false;
+
+      mid = l / 2;
+      if (l % 2 == 0)
+      {
+        if (s[mid] == 'y')
+          return (s[mid - 1] == 'x' && s[mid + 1] == 'z');
+
+        if (s[mid - 1] == 'y')
+          return (s[mid - 2] == 'x' && s[mid] == 'z');
+
+        return false;
+      }
+      // len%2 != 0
+      else if (s[mid] == 'y')
+        return (s[mid - 1] == 'x' && s[mid + 1] == 'z');
+      return false;
+    }
+
+    //Exercise 30
+    public String string_zipZap(String s)
+    {
+      int l = s.Length;
+      int l1 = l - 2;
+      int i = 0;
+      char ch;
+      StringBuilder sb = new StringBuilder(l);
+      while (i < l)
+      {
+        ch = s[i];
+        if (ch == 'z' && i < l1 && s[i + 2] == 'p')
+        {
+          sb.Append("zp");
+          i += 3;
+        }
+        else
+        {
+          sb.Append(ch);
+          i++;
+        }
+      }
+      return sb.ToString();
+    }
+
+    //Exercise 31
+    public int count_yz(String s)
+    {
+      int count = 0;
+      int limit = s.Length - 1;
+      char ch;
+      s = s.ToLower();
+      ch = s[0];
+
+
+      for (int i = 1; i <= limit; i++)
+      {
+        if (ch == 'y' || ch == 'z')
+        {
+          ch = s[i];
+          if (!Char.IsLetter(ch))
+            count++;
+        }
+        else
+          ch = s[i];
+      }
+
+
+      if (ch == 'y' || ch == 'z')
+        count++;
+      return count;
+    }
+
+
+
+
+    //Excercise 32
+    public string ReverseString(string input)
+    {
+      char[] charArray = input.ToCharArray();
+      string reverse = string.Empty;
+
+      for (int i = charArray.Length - 1; i > -1; i--)
+      {
+        reverse += charArray[i];
+      }
+
+      return reverse;
+    }
+
+
+
+    //Exercise 33
+    public bool IsPalindrome(string input)
+    {
+      var succcess = true;
+
+      input = input.Replace(" ", "");
+
+      if (input.Length == 0)
+        succcess = false;
+      else
+        for (var i = 0; i < input.Length / 2 + 1; i++)
+        {
+          if (input[i] != input[input.Length - i - 1])
+          {
+            //doesn't not succeed if it's not palindrome
+            succcess = false;
+            break;
+          }
+        }
+      //Return palindrome if it's true
+      return succcess;
+    }
+
+    //Exercise 34
+    public int vowel_count(string s)
+    {
+      int l = s.Length;
+      int count = 0;
+      s = s.ToLower();
+      for (int i = 0; i <l; i++)
+      {
+        if (s[i] == 'a' || s[i] == 'e' || s[i] == 'o' || s[i] == 'u' || s[i] == 'i')
+          count++;
       }
       return count;
+    }
+
+    //Exercise 35
+    public string string_app(string s)
+    {
+
+      int n = s.IndexOf("is");
+      int count;
+      while (n != -1)
+      {
+        count = 0;
+        if (n > 0)
+        {
+          if (!char.IsLetter(s[n - 1]))
+            count++;
+        }
+        else
+          count++;
+
+
+        if (n < s.Length - 2)
+        {
+          if (!char.IsLetter(s[n + 2]))
+            count++;
+        }
+        else
+          count++;
+
+
+        if (count == 2)
+          s = s.Substring(0, n) + "is not" + s.Substring(n + 2);
+
+        n = s.IndexOf("is", n + 2);
+      }
+
+      return s;
     }
 
 

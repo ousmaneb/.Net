@@ -257,11 +257,11 @@ namespace Project1
       int[] a18 = { 1, 2, 10, 4, 5, 6 };
       //int[] b5 = { 7, 2, 3, 4, 6 };
 
-      int[] z18 = test5.array_multiple10(a18);
+      int[] z18 = test18.array_multiple10(a18);
 
       for (int i = 0; i <= z18.Length - 1; i++)
       {
-        Console.WriteLine(z17[i]+" ");
+        Console.WriteLine(z18[i]+" ");
       }
 
       Console.WriteLine("-----------------exercise 18--------------");
@@ -333,10 +333,16 @@ namespace Project1
 
 
       Console.WriteLine("-----------------exercise 26--------------");
-      string s32 = "Hellohi";
+      string s32 = "Helhilohi";
       Array1 test26 = new Array1();
 
       Console.WriteLine(test25.string_nbOcc(s32));
+
+      Console.WriteLine("-----------------exercise 34--------------");
+      string s34 = "Helhilohi";
+      Array1 test34 = new Array1();
+
+      Console.WriteLine(test34.vowel_count(s34));
 
       Console.ReadKey();
 
