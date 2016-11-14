@@ -4,15 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EBS
+namespace Invoice
 {
   class Program
   {
     static void Main(string[] args)
     {
 
-      //string [] suit = { "Hear", "Diamonds", "Clubs", "Spades" };
-      //int[] number = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+      ///////Invoice
+
+      Invoice inv = new Invoice("203", "Chair", -1, 200.0);
+
+      Console.WriteLine("The invoice is: "+inv.GetInvoice(200));
+      Console.ReadKey();
     }
   }
 }
