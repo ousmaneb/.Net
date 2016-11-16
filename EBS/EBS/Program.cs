@@ -10,9 +10,16 @@ namespace EBS
   {
     static void Main(string[] args)
     {
+      Deck deck = new Deck();
 
-      //string [] suit = { "Hear", "Diamonds", "Clubs", "Spades" };
-      //int[] number = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+      deck.Shuffle();
+      for(int i = 0; i<52; i++)
+      {
+        deck.Deal_card();
+        if ((i + 1) % 4 == 0)
+          Console.WriteLine();
+      }
+      Console.ReadKey();
     }
   }
 }

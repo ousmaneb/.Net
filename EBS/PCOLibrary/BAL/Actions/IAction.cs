@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace PCOLibrary.BAL.Actions
 {
-  public  interface IAction
+  public  interface IAction<T> where T:class
   {
 
-   bool Insert(Object o);
-   bool Delete(Object o);
-   bool Update(Object o);
-   IEnumerable<Object> Get();
-   object Get(int id);
+   bool Insert(T o);
+   bool Delete(int id);
+   bool Update(T o);
+   IEnumerable<T> Get();
+   T Get(int id);
   }
 }

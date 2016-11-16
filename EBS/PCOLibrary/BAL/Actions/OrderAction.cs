@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCOLibrary.BAL.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,29 +7,29 @@ using System.Threading.Tasks;
 
 namespace PCOLibrary.BAL.Actions
 {
-  public class OrderAction : IAction
+  public class OrderAction : IAction<OrderModel>
   {
-    public bool Delete(object o)
+    public bool Delete(int id)
     {
       throw new NotImplementedException();
     }
 
-    public IEnumerable<object> Get()
+    public IEnumerable<OrderModel> Get()
     {
       throw new NotImplementedException();
     }
 
-    public object Get(int id)
+    public OrderModel Get(int id)
     {
       throw new NotImplementedException();
     }
 
-    public bool Insert(object o)
+    public bool Insert(OrderModel o)
     {
       throw new NotImplementedException();
     }
 
-    public bool Update(object o)
+    public bool Update(OrderModel o)
     {
       throw new NotImplementedException();
     }

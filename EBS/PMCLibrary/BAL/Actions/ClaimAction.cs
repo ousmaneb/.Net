@@ -3,37 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PCOLibrary.BAL.Actions;
-using PCOLibrary.BAL.Model;
+using PMCLibrary.BAL.Actions.Interface;
+using PMCLibrary.BAL.Model;
 
-namespace PCOLibrary.BAL.Actions
+
+namespace PMCLibrary.BAL.Actions
 {
-  public class CustomerAction : IAction<CustomerModel>
+  public class ClaimAction : IAction<ClaimModel>, IClaim
   {
+    public bool Insert(ClaimModel o)
+    {
+      throw new NotImplementedException();
+    }
+
     public bool Delete(int id)
     {
       throw new NotImplementedException();
     }
 
-    public IEnumerable<CustomerModel> Get()
+    public bool Update(ClaimModel o)
     {
       throw new NotImplementedException();
     }
 
-    public CustomerModel Get(int id)
+    public IEnumerable<ClaimModel> Get()
     {
       throw new NotImplementedException();
     }
 
-    public bool Insert(CustomerModel o)
-    {
-      throw new NotImplementedException();
-    }
-
-    public bool Update(CustomerModel o)
+    public ClaimModel Get(int id)
     {
       throw new NotImplementedException();
     }
   }
-
 }

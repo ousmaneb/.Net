@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCOLibrary.BAL.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,38 +7,36 @@ using System.Threading.Tasks;
 
 namespace PCOLibrary.BAL.Actions
 {
-  class CategoryActions : Actions
+  class CategoryActions : IAction<Category>
   {
-    public override bool Delete(object o)
+    public bool Delete(int id)
     {
       throw new NotImplementedException();
     }
 
-    public override IEnumerable<object> Get()
+    public IEnumerable<Category> Get()
     {
       throw new NotImplementedException();
     }
 
-    public override object Get(int id)
+    public Category Get(int id)
     {
       throw new NotImplementedException();
     }
 
-    public override bool Insert(object o)
+    //public override int GetCount(IEnumerable<Category>)
+    //{
+    //  return o.Count() + 10;
+    //}
+
+    public bool Insert(Category o)
     {
       throw new NotImplementedException();
     }
 
-    public override bool Update(object o)
+    public bool Update(Category o)
     {
       throw new NotImplementedException();
     }
-
-    public override int GetCount(IEnumerable<object> o)
-    {
-      return o.Count() + 10;
-    }
-
-
   }
 }

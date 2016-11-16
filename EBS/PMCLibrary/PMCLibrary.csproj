@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6145FB4F-E9B2-4B48-BCCD-99F12185F239}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{833976B3-1566-4632-9882-BF6C14897B71}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EBS</RootNamespace>
-    <AssemblyName>EBS</AssemblyName>
+    <RootNamespace>PMCLibrary</RootNamespace>
+    <AssemblyName>PMCLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,15 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Card.cs" />
-    <Compile Include="Deck.cs" />
-    <Compile Include="Enum.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="BAL\Actions\Actions.cs" />
+    <Compile Include="BAL\Actions\ClaimAction.cs" />
+    <Compile Include="BAL\Actions\Interface\IAction.cs" />
+    <Compile Include="BAL\Actions\Interface\IClaim.cs" />
+    <Compile Include="BAL\Actions\Interface\IMember.cs" />
+    <Compile Include="BAL\Actions\Interface\IPlan.cs" />
+    <Compile Include="BAL\Actions\MemberAction.cs" />
+    <Compile Include="BAL\Actions\PlanAction.cs" />
+    <Compile Include="BAL\Model\ClaimModel.cs" />
+    <Compile Include="BAL\Model\MemberModel.cs" />
+    <Compile Include="BAL\Model\PlanModel.cs" />
+    <Compile Include="DAL\Plan_DAL.cs" />
+    <Compile Include="Helper\DbHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
