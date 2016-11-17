@@ -35,5 +35,10 @@ namespace PMCLibrary.BAL.Actions
     {
       throw new NotImplementedException();
     }
-  }
+
+        IEnumerable<ClaimModel> IAction<ClaimModel>.Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

@@ -37,17 +37,17 @@ namespace PMCLibrary.BAL.Actions
       throw new NotImplementedException();
     }
 
-    public IEnumerable<PlanModel> Get()
+    public IEnumerable<PlanModel> Get(int id)
     {
-      throw new NotImplementedException();
-    }
+            return Plan_DAL.GetAll().Where(s => s.PlanId == id);
+        }
 
-    public PlanModel Get(int id)
-    {
-      throw new NotImplementedException();
-    }
+        public IEnumerable<PlanModel> Get()
+        {
+            return Plan_DAL.GetAll();
+        }
 
-    public IEnumerable<object> GetMemberWithPlanIdCount()
+        public IEnumerable<object> GetMemberWithPlanIdCount()
     {
       throw new NotImplementedException();
     }

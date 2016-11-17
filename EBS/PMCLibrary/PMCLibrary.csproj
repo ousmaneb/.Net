@@ -52,6 +52,7 @@
     <Compile Include="BAL\Model\ClaimModel.cs" />
     <Compile Include="BAL\Model\MemberModel.cs" />
     <Compile Include="BAL\Model\PlanModel.cs" />
+    <Compile Include="DAL\Member_DAL.cs" />
     <Compile Include="DAL\Plan_DAL.cs" />
     <Compile Include="Helper\DbHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

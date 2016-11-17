@@ -5,14 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using PMCLibrary.BAL.Actions.Interface;
 using PMCLibrary.BAL.Model;
+using PMCLibrary.DAL;
 
 namespace PMCLibrary.BAL.Actions
 {
-  public class MemberAction : IAction<MemberModel>
+  public class MemberAction : IAction<MemberModel>, IMember
   {
     public bool Insert(MemberModel o)
     {
-      throw new NotImplementedException();
+        return Member_DAL.Insert(o);
     }
 
     public bool Delete(int id)
@@ -27,12 +28,17 @@ namespace PMCLibrary.BAL.Actions
 
     public IEnumerable<MemberModel> Get()
     {
-      throw new NotImplementedException();
+        return PMCLibrary.DAL.Member_DAL.GetAll();
     }
 
-    public MemberModel Get(int id)
+    public IEnumerable<MemberModel> Get(int id)
     {
       throw new NotImplementedException();
     }
+
+      public IEnumerable<object> GetPlanWithId()
+      {
+          throw new NotImplementedException();
+      }
   }
 }

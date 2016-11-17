@@ -12,6 +12,6 @@ namespace PMCLibrary.BAL.Actions.Interface
     bool Delete(int id);
     bool Update(T o);
     IEnumerable<T> Get();
-    T Get(int id);
-  }
+        IEnumerable<T> Get(int id);
+    }
 }

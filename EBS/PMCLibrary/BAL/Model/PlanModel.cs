@@ -1,24 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace PMCLibrary.BAL.Model
 {
-  public class PlanModel
-  {
-    public int PlanId { get; set; }
-    public string PlanName { get; set; }
-    public string Descr { get; set; }
-
-    public double DetuctibleValue { get; set; }
-
-    public PlanModel()
+    public class PlanModel
     {
-      PlanName = string.Empty;
-      Descr = string.Empty;
+        public PlanModel()
+        {
+            PlanName = string.Empty;
+            Descr = string.Empty;
+            Member = new List<MemberModel>();
+        }
+
+        public ICollection<MemberModel> Member { get; set; }
+
+        public int PlanId { get; set; }
+        public string PlanName { get; set; }
+        public string Descr { get; set; }
+
+        public double DetuctibleValue { get; set; }
     }
-  }
 }
