@@ -54,7 +54,9 @@
                     <asp:Label ID="lblResult" runat="server"></asp:Label>
                 </td>
             </tr>
-            <a href="Index.aspx">Index.aspx</a><br />
+          <a href="../ClaimView/Create.aspx">../ClaimView/Create.aspx</a><br />
+          <a href="../ClaimView/Index.aspx">../ClaimView/Index.aspx</a><br/>
+            <a href="Index.aspx">/PlanView/Index.aspx</a><br />
             <a href="../MemberView/Index.aspx">../MemberView/Index.aspx</a><br />
             <a href="../MemberView/Insert.aspx">../MemberView/Insert.aspx</a>
         </table>

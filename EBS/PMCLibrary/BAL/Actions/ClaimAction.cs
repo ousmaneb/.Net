@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PMCLibrary.BAL.Actions.Interface;
 using PMCLibrary.BAL.Model;
+using PMCLibrary.DAL;
 
 
 namespace PMCLibrary.BAL.Actions
@@ -13,7 +14,7 @@ namespace PMCLibrary.BAL.Actions
   {
     public bool Insert(ClaimModel o)
     {
-      throw new NotImplementedException();
+      return Claim_DAL.Insert(o);
     }
 
     public bool Delete(int id)
@@ -28,7 +29,7 @@ namespace PMCLibrary.BAL.Actions
 
     public IEnumerable<ClaimModel> Get()
     {
-      throw new NotImplementedException();
+      return PMCLibrary.DAL.Claim_DAL.GetAll();
     }
 
     public ClaimModel Get(int id)

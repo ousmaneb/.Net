@@ -22,7 +22,7 @@ namespace PMCLibrary.DAL
                 conn = new SqlConnection(conStr);
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("FName", obj.FirstName);
-                cmd.Parameters.AddWithValue("LName", obj.FirstName);
+                cmd.Parameters.AddWithValue("LName", obj.Lastname);
                 cmd.Parameters.AddWithValue("DOB", obj.Dob);
                 cmd.Parameters.AddWithValue("Gender", obj.Gender);
                 cmd.Parameters.AddWithValue("UserName", obj.Username);
@@ -68,7 +68,8 @@ namespace PMCLibrary.DAL
                     obj.Lastname = dr["LName"].ToString();
                     obj.Dob = dr["DOB"].ToString();
                     obj.Gender = dr["Gender"].ToString();
-                    obj.PlanId = Convert.ToInt32(dr["Plan_id"]);
+                    obj.Username = dr["UserName"].ToString();
+                    obj.Plan.PlanName =dr["Plan_Name"].ToString();
                     results.Add(obj);
                 }
             }

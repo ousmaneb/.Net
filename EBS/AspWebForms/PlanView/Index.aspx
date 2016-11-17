@@ -33,10 +33,10 @@
             </asp:GridView>
         </div>
 
-        <a href="Create.aspx">Create.aspx</a><br/>
+        <a href="Create.aspx">/PlanView/Create.aspx</a><br/>
         <a href="../MemberView/Index.aspx">../MemberView/Index.aspx</a><br/>
         <a href="../MemberView/Insert.aspx">../MemberView/Insert.aspx</a>
-
+       <a href="../ClaimView/Index.aspx">../ClaimView/Index.aspx</a>
     </div>
 </form>
 </body>
