@@ -63,6 +63,11 @@
         </td>
         <td>
           <asp:TextBox ID="txtAmount" runat="server"></asp:TextBox>
+                   <asp:RegularExpressionValidator ID="RegNameClaim" runat="server"
+                                          ControlToValidate="txtAmount"
+                                          ValidationExpression="^\d+(\.\d\d)?$"
+                                          Text="Enter a positive number" SetFocusOnError="true"
+                                      BackColor="yellow"/>
         </td>
       </tr>
 
@@ -73,10 +78,13 @@
       <asp:Label ID="lblResult" runat="server"></asp:Label>
     </p>
   </div>
-
-  <a href="Index.aspx">/MemberView/Index.aspx</a><br/>
+  <a href="Index.aspx">../Index.aspx</a><br/>
+  <a href="../MemberView/Index.aspx">../MemberView/Index.aspx</a><br/>
+  <a href="../MemberView/Insert.aspx">../MemberView/Insert.aspx</a><br/>
   <a href="../PlanView/Create.aspx">../PlanView/Create.aspx</a><br/>
-  <a href="../PlanView/Index.aspx">../PlanView/Index.aspx</a>
+  <a href="../PlanView/Index.aspx">../PlanView/Index.aspx</a><br/>
+  
+
 </form>
 
 

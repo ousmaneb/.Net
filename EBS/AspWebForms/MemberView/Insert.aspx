@@ -26,6 +26,11 @@
         </td>
         <td>
           <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
+           <asp:RegularExpressionValidator ID="regFirstName" runat="server"
+                                          ControlToValidate="txtFirstName"
+                                          ValidationExpression="^[a-zA-Z'.]{1,10}$"
+                                          Text="Enter a valid Name" SetFocusOnError="true"
+                                      BackColor="yellow"/>
         </td>
       </tr>
 
@@ -35,6 +40,11 @@
         </td>
         <td>
           <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
+                     <asp:RegularExpressionValidator ID="RegLastName" runat="server"
+                                          ControlToValidate="txtLastName"
+                                          ValidationExpression="^[a-zA-Z'.]{1,10}$"
+                                          Text="Enter a valid Name" SetFocusOnError="true"
+                                      BackColor="yellow"/>
         </td>
       </tr>
 
@@ -59,6 +69,11 @@
         </td>
         <td>
           <asp:TextBox ID="txtGender" runat="server"></asp:TextBox>
+          <asp:RegularExpressionValidator ID="RegGender" runat="server"
+                                          ControlToValidate="txtGender"
+                                          ValidationExpression="^M(ale)?$|^F(emale)?$"
+                                          Text="Enter M/F or Male/Female" SetFocusOnError="true"
+                                      BackColor="yellow"/>
         </td>
       </tr>
 
@@ -68,6 +83,11 @@
         </td>
         <td>
           <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
+                  <asp:RegularExpressionValidator ID="RegUserName" runat="server"
+                                          ControlToValidate="txtUserName"
+                                          ValidationExpression="^[A-Za-z][A-Za-z0-9._]{5,14}$"
+                                          Text="Enter a valid User Name" SetFocusOnError="true"
+                                      BackColor="yellow"/>
         </td>
       </tr>
 
@@ -88,10 +108,15 @@
       <asp:Label ID="lblResult" runat="server"></asp:Label>
     </p>
   </div>
-
-  <a href="Index.aspx">/MemberView/Index.aspx</a><br/>
+  <a href="../ClaimView/Create.aspx">../ClaimView/Create.aspx</a><br/>
+  <a href="../ClaimView/Index.aspx">../ClaimView/Index.aspx</a><br/>
+  <a href="Index.aspx">../Index.aspx</a><br/>
   <a href="../PlanView/Create.aspx">../PlanView/Create.aspx</a><br/>
   <a href="../PlanView/Index.aspx">../PlanView/Index.aspx</a>
+  
+  
+
+
 </form>
 
 

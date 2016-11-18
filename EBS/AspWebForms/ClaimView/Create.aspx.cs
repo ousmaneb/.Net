@@ -34,10 +34,20 @@ namespace AspWebForms.ClaimView
 
     protected void btnCreate_Click(object sender, EventArgs e)
     {
+
+
+      int val;
+      var r = int.TryParse(txtAmount.Text, out val);
+      if (!r)
+        return;
+
       var model = new ClaimModel(Convert.ToInt32(ddlClaim.SelectedValue),
         txtClaimDate.Text,
         txtDueDate.Text,
         Convert.ToDouble(txtAmount.Text));
+
+
+
       var result = new ClaimAction().Insert(model);
     }
   }

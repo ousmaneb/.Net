@@ -35,7 +35,21 @@ namespace AspWebForms.MemberView
         txtDateOfBirth.Text,
         txtGender.Text,
         txtUserName.Text);
-      var result = new MemberAction().Insert(model);
+
+      if (txtFirstName.Text == string.Empty || txtLastName.Text == string.Empty|| txtDateOfBirth.Text == string.Empty|| txtGender.Text == string.Empty|| txtUserName.Text == string.Empty)
+      {
+        txtFirstName.Text = "";
+        txtLastName.Text = "";
+        txtDateOfBirth.Text = "";
+        txtGender.Text = "";
+        txtUserName.Text = "";
+      }
+      else
+      {
+        var result = new MemberAction().Insert(model);
+      }
+       
+      
     }
   }
 }

@@ -40,6 +40,15 @@ namespace AspWebForms.PlanView {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rqvPlanName;
         
         /// <summary>
+        /// regNamePlan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regNamePlan;
+        
+        /// <summary>
         /// txtDescr control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace AspWebForms.PlanView {
         protected global::System.Web.UI.WebControls.TextBox txtDescr;
         
         /// <summary>
+        /// RegNameDescr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegNameDescr;
+        
+        /// <summary>
         /// txtDetuc control.
         /// </summary>
         /// <remarks>
@@ -56,6 +74,15 @@ namespace AspWebForms.PlanView {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDetuc;
+        
+        /// <summary>
+        /// RegNameDetuc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegNameDetuc;
         
         /// <summary>
         /// btnCreate control.

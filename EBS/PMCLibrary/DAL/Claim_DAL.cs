@@ -36,6 +36,7 @@ namespace PMCLibrary.DAL
 
       catch (Exception ex)
       {
+        Console.WriteLine("An error occurred to insert: '{0}'", ex);
       }
       finally
       {

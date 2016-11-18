@@ -13,7 +13,7 @@
          <h1 class="title1">Members' List</h1>
     <asp:GridView ID="gvMember" runat="server" AutoGenerateColumns="false" CssClass="table table-hover" >
         <Columns>
-            <asp:BoundField DataField="MemberId" HeaderText="Member Id" />
+            <asp:BoundField DataField="MemberId" HeaderText="Member Id"  Visible="False"/>
             <asp:BoundField DataField="FirstName" HeaderText="First Name" />
             <asp:BoundField DataField="LastName" HeaderText="Last Name" />
             <asp:BoundField DataField="DOB" HeaderText="Date Of Birth" />
@@ -28,9 +28,13 @@
         </Columns>
     </asp:GridView>
     </div>
-        <a href="Insert.aspx">/MemberView/Insert.aspx</a><br/>
-        <a href="../PlanView/Create.aspx">../PlanView/Create.aspx</a> <br/>
-        <a href="../PlanView/Index.aspx">../PlanView/Index.aspx</a>
+      <a href="../ClaimView/Create.aspx">../ClaimView/Create.aspx</a><br/>
+      <a href="../ClaimView/Index.aspx">../ClaimView/Index.aspx</a><br/>
+      <a href="Insert.aspx">../Insert.aspx</a><br/>
+      <a href="../PlanView/Create.aspx">../PlanView/Create.aspx</a><br/>
+      <a href="../PlanView/Index.aspx">../PlanView/Index.aspx</a>
+
+
     </form>
 </body>
 </html>
