@@ -49,7 +49,42 @@ namespace PMCLibrary.DAL
 
     }
 
-    public static ICollection<ClaimModel> GetAll()
+        
+        public static bool Update(ClaimModel obj)
+        {
+            bool result = false;
+            SqlConnection conn = null;
+            try
+            {
+                string conStr = DbHelper.GetConnectionString();
+                string query = "usp_Claim_Update";
+                conn = new SqlConnection(conStr);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Claim_Date", obj.ClaimDate);
+                cmd.Parameters.AddWithValue("@Due_Date", obj.DueDate);
+                cmd.Parameters.AddWithValue("@Claim_Amount", obj.ClaimAmount);
+                cmd.Parameters.AddWithValue("@Claim_id", obj.ClaimId);
+                cmd.Parameters.AddWithValue("@Mem_id", obj.MemberId);
+
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                result = cmd.ExecuteNonQuery() > 0 ? true : false;
+                conn.Close();
+            }
+
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (conn != null)
+                    conn.Close();
+            }
+            return result;
+        }
+        
+
+        public static ICollection<ClaimModel> GetAll()
     {
       ICollection<ClaimModel> results = new List<ClaimModel>();
       string conStr = DbHelper.GetConnectionString();

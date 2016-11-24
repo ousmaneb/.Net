@@ -2,7 +2,7 @@
 
 namespace PMCLibrary.BAL.Model
 {
-    public class PlanModel
+    public sealed class PlanModel
     {
         public PlanModel()
         {

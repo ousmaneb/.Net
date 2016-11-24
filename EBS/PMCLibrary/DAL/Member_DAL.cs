@@ -44,6 +44,86 @@ namespace PMCLibrary.DAL
       return result;
     }
 
+
+        public static bool Update(MemberModel obj)
+        {
+            bool result = false;
+            SqlConnection conn = null;
+            try
+            {
+                string conStr = DbHelper.GetConnectionString();
+                string query = "usp_Member_Update";
+                conn = new SqlConnection(conStr);
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+               
+                cmd.Parameters.AddWithValue("FName", obj.FirstName);
+                cmd.Parameters.AddWithValue("@LName", obj.Lastname);
+                cmd.Parameters.AddWithValue("@DOB", obj.Dob);
+                cmd.Parameters.AddWithValue("@Gender", obj.Gender);
+                cmd.Parameters.AddWithValue("@UserName", obj.Username);
+                cmd.Parameters.AddWithValue("@Plan_id", obj.PlanId);
+                cmd.Parameters.AddWithValue("@Mem_id", obj.MemberId);
+
+
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                result = cmd.ExecuteNonQuery() > 0 ? true : false;
+                conn.Close();
+            }
+
+            catch (Exception ex)
+            {
+        Console.WriteLine("An error occurred to update: '{0}'", ex);
+      }
+            finally
+            {
+                if (conn != null)
+                    conn.Close();
+            }
+            return result;
+        }
+
+    public static bool Delete(MemberModel obj)
+    {
+      bool result = false;
+      SqlConnection conn = null;
+      try
+      {
+        string conStr = DbHelper.GetConnectionString();
+        string query = "usp_Member_Delete";
+        conn = new SqlConnection(conStr);
+        SqlCommand cmd = new SqlCommand(query, conn);
+
+
+        cmd.Parameters.AddWithValue("FName", obj.FirstName);
+        cmd.Parameters.AddWithValue("@LName", obj.Lastname);
+        cmd.Parameters.AddWithValue("@DOB", obj.Dob);
+        cmd.Parameters.AddWithValue("@Gender", obj.Gender);
+        cmd.Parameters.AddWithValue("@UserName", obj.Username);
+        cmd.Parameters.AddWithValue("@Plan_id", obj.PlanId);
+        cmd.Parameters.AddWithValue("@Mem_id", obj.MemberId);
+
+
+        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+        conn.Open();
+        result = cmd.ExecuteNonQuery() > 0 ? true : false;
+        conn.Close();
+      }
+
+      catch (Exception ex)
+      {
+        Console.WriteLine("An error occurred to update: '{0}'", ex);
+      }
+      finally
+      {
+        if (conn != null)
+          conn.Close();
+      }
+      return result;
+    }
+
+
     public static ICollection<MemberModel> GetAll()
     {
       ICollection<MemberModel> results = new List<MemberModel>();

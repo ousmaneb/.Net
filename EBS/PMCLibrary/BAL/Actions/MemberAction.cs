@@ -21,9 +21,14 @@ namespace PMCLibrary.BAL.Actions
       throw new NotImplementedException();
     }
 
+    public bool Delete(MemberModel o)
+    {
+      return Member_DAL.Delete(o);
+    }
+
     public bool Update(MemberModel o)
     {
-      throw new NotImplementedException();
+        return Member_DAL.Update(o);
     }
 
     public IEnumerable<MemberModel> Get()

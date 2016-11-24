@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClaimView\Create.aspx" />
+    <Content Include="Content\business-casual.css" />
     <Content Include="fonts\Images\cal_image.png" />
     <Content Include="ClaimView\Index.aspx" />
     <Content Include="Content\bootstrap-datepicker.css" />
@@ -114,6 +115,16 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\4.jpg" />
+    <Content Include="img\bg.jpg" />
+    <Content Include="img\bg11.jpg" />
+    <Content Include="img\bg2.jpg" />
+    <Content Include="img\slide-2.jpg" />
+    <Content Include="img\slide-3.jpg" />
+    <Content Include="img\slide-1.png" />
+    <Content Include="img\intro-pic.jpg" />
+    <Content Include="img\1.jpg" />
+    <Content Include="img\3.jpg" />
     <Content Include="MemberView\Index.aspx" />
     <Content Include="MemberView\Insert.aspx" />
     <Content Include="packages.config" />
@@ -160,6 +171,7 @@
     <Content Include="PlanView\Index.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="scripts\jquery.js" />
     <Content Include="scripts\locales\bootstrap-datepicker.ar.min.js" />
     <Content Include="scripts\locales\bootstrap-datepicker.az.min.js" />
     <Content Include="scripts\locales\bootstrap-datepicker.bg.min.js" />
@@ -226,6 +238,7 @@
     <Content Include="scripts\locales\bootstrap-datepicker.vi.min.js" />
     <Content Include="scripts\locales\bootstrap-datepicker.zh-CN.min.js" />
     <Content Include="scripts\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="Static Pages\index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

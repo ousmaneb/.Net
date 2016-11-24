@@ -6,9 +6,19 @@
 <head runat="server">
   <title>Create Insurance</title>
   <link rel="stylesheet" type="text/css" href="StyleSheet.less"/>
+
 </head>
+  
+
 <body>
 <form id="form1" runat="server">
+  
+
+  
+  
+  
+  
+
   <div>
     <h1 class="title1">INSURANCE WEB APP: Create New Insurance</h1>
     <table class="t">

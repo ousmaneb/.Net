@@ -24,7 +24,7 @@ namespace PMCLibrary.BAL.Actions
 
     public bool Update(ClaimModel o)
     {
-      throw new NotImplementedException();
+        return Claim_DAL.Update(o);
     }
 
     public IEnumerable<ClaimModel> Get()

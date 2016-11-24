@@ -9,6 +9,9 @@ namespace PMCLibrary.DAL
 {
   public class Plan_DAL
   {
+
+
+
     public static bool Insert(PlanModel o)
     {
       var result = false;
@@ -46,7 +49,43 @@ namespace PMCLibrary.DAL
     }
 
 
-    public static ICollection<PlanModel> GetAll()
+
+
+        public static bool Update(PlanModel obj)
+        {
+            bool result = false;
+            SqlConnection conn = null;
+            try
+            {
+                string conStr = DbHelper.GetConnectionString();
+                string query = "usp_Plan_Update";
+                conn = new SqlConnection(conStr);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Plan_id", obj.PlanId);
+                cmd.Parameters.AddWithValue("@Plan_Name", obj.PlanName);
+                cmd.Parameters.AddWithValue("@Plan_Descr", obj.Descr);
+                cmd.Parameters.AddWithValue("@Plan_DectValue", obj.DetuctibleValue);
+               
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                result = cmd.ExecuteNonQuery() > 0 ? true : false;
+                conn.Close();
+            }
+
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (conn != null)
+                    conn.Close();
+            }
+            return result;
+        }
+
+
+
+        public static ICollection<PlanModel> GetAll()
     {
       ICollection<PlanModel> results = new List<PlanModel>();
       var conStr = DbHelper.GetConnectionString();

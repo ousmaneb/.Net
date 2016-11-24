@@ -1,6 +1,6 @@
 ﻿namespace PMCLibrary.BAL.Model
 {
-    public class MemberModel
+    public sealed class MemberModel
     {
 
         int _classProperty;
@@ -25,7 +25,7 @@
         public PlanModel Plan { get; set; }
 
 
-        internal MemberModel()
+        public MemberModel()
         {
             FirstName = string.Empty;
             Lastname = string.Empty;

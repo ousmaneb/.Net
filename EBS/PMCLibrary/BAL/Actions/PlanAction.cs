@@ -34,7 +34,7 @@ namespace PMCLibrary.BAL.Actions
 
     public bool Update(PlanModel o)
     {
-      throw new NotImplementedException();
+        return Plan_DAL.Update(o);
     }
 
     public IEnumerable<PlanModel> Get(int id)

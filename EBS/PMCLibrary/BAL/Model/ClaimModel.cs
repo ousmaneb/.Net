@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PMCLibrary.BAL.Model
 {
-  public class ClaimModel
+  public sealed class ClaimModel
   {
     public int ClaimId { get; set; }
     public int MemberId { get; set; }
@@ -28,7 +28,7 @@ namespace PMCLibrary.BAL.Model
       }
     }
 
-    internal ClaimModel()
+    public ClaimModel()
     {
       ClaimDate = string.Empty;
       DueDate = string.Empty;
