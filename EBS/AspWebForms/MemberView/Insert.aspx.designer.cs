@@ -40,6 +40,15 @@ namespace AspWebForms.MemberView {
         protected global::System.Web.UI.WebControls.TextBox txtFirstName;
         
         /// <summary>
+        /// rqvFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rqvFirstName;
+        
+        /// <summary>
         /// regFirstName control.
         /// </summary>
         /// <remarks>

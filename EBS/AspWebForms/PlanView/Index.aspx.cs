@@ -8,7 +8,8 @@ namespace AspWebForms.PlanView
 {
     public partial class Index : Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+
+    protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
@@ -51,7 +52,9 @@ namespace AspWebForms.PlanView
         }
 
 
-        protected void gvPlan_RowCommand(object sender, GridViewCommandEventArgs e)
+
+
+    protected void gvPlan_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             var index = Convert.ToInt32(e.CommandArgument);
             if (e.CommandName == "EditRow")

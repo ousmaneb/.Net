@@ -13,20 +13,10 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-  <title>Search Plan</title>
+  <title>Plan View</title>
   <link rel="stylesheet" type="text/css" href="StyleSheet.less"/>
-    
-    
-    <link rel="stylesheet" type="text/css" href="../PlanView/StyleSheet.less"/>
+
     <link href="../Content/bootstrap.min.css" rel="stylesheet"/>
-    <style>
-        .HellowWorldPopup {
-            background: white;
-            min-height: 150px;
-            min-width: 200px;
-        }
-    </style>
-    
     
     <!-- Bootstrap Core CSS -->
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
@@ -44,6 +34,10 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+    @import url('StyleSheet.less');
+
+  </style>
      
 </head>
     
@@ -51,50 +45,64 @@
 
 <body>
 
-  
 <div class="brand">DK Insurance</div>
 <div class="address-bar">1 East 96th street | New York, NY 10026 | 123.456.7890</div>
 
 <!-- Navigation -->
 <nav class="navbar navbar-default" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-            <a class="navbar-brand" href="index.html">Business Casual</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
 
-                <li>
-                    <a href="../StaticPages/index.html">Home</a>
-                </li>
-                <li>
-                    <a href="../PlanView/Index.aspx">Plan View</a>
-                </li>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
 
-                <li>
-                    <a href="../MemberView/Index.aspx">Member View</a>
-                </li>
+        <li>
 
-                <li>
-                    <a href="../ClaimView/Index.aspx">Claim View</a>
-                </li>
 
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+          <button onclick="location.href = '../Static%20Pages/index.html'" type="button" class="dropbtn">
+            HOME
+          </button>
+
+
+        </li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">PLAN VIEW</button>
+            <div class="dropdown-content">
+              <a href="../PlanView/Index.aspx">Edit/Delete Plan</a>
+              <a href="../PlanView/Create.aspx">Create Plan</a>
+            </div>
+          </div>
+
+        </li>
+
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">MEMBER VIEW</button>
+            <div class="dropdown-content">
+              <a href="../MemberView/Index.aspx">Edit/Delete Member</a>
+              <a href="../MemberView/Insert.aspx">Create Member</a>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">CLAIM VIEW</button>
+            <div class="dropdown-content">
+              <a href="../ClaimView/Index.aspx">Edit/Delete Claim</a>
+              <a href="../ClaimView/Create.aspx">Create Claim</a>
+            </div>
+          </div>
+        </li>
+
+      </ul>
     </div>
-    <!-- /.container -->
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
 </nav>
-    
       
     
     
@@ -107,23 +115,17 @@
 <form id="form1" runat="server" class="form-group">
         <asp:ScriptManager ID="scrpt" runat="server"></asp:ScriptManager>
   <div>
-    <h1 class="title1">INSURANCE WEB APP: Plans' Summary</h1>
-
-    <div>
-        
-        &nbsp;
-      <asp:TextBox ID="txtsearch" runat="server"></asp:TextBox>
-      <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Search"/>
-    </div>
-      <br />
-
-    <div>
+    
+      <table>
+      <tr>
+        <td style="text-align: center" class="t1">
+    <h1 class="title1">Plans</h1>
             <asp:UpdatePanel ID="udp2" runat="server" UpdateMode="Conditional">
             <ContentTemplate>
      <asp:GridView ID="GridView1" runat="server"
                               AutoGenerateColumns="false"
-                              CssClass="table table-hover"
-                              DataKeyNames="PlanId">
+                               CssClass="floatLeft"
+                              DataKeyNames="PlanId" RowStyle-CssClass="rowHover">
         <Columns>
           <asp:BoundField DataField="PlanId" HeaderText="Id" Visible="False"/>
             <asp:TemplateField HeaderText="Plan">
@@ -139,17 +141,19 @@
       </asp:GridView>
                      </ContentTemplate>
         </asp:UpdatePanel>
-    </div>
-      
+    </td>
+ 
+        <td style="text-align: center" class="t2">     
       
         <asp:UpdatePanel ID="udp" runat="server" UpdateMode="Conditional">
         <ContentTemplate>
 
-            <h1 class="title1">Plans' List</h1>
-            <asp:GridView ID="gvPlan" runat="server" AutoGenerateColumns="false"
-                          CssClass="table table-hover"
+            <h1 class="title1">Edit/Delete Plans</h1>
+            <asp:GridView ID="gvPlan" runat="server" 
+              AutoGenerateColumns="false"
+              CssClass="floatRight" 
                           OnRowCommand="gvPlan_RowCommand"
-                          DataKeyNames="PlanId">
+                          DataKeyNames="PlanId" RowStyle-CssClass="rowHover">
                 <Columns>
                     <asp:BoundField DataField="PlanId" HeaderText="Plan Id" Visible="False"/>
                          
@@ -246,16 +250,49 @@
                         Add on Panel for Delete--%>
         </ContentTemplate>
     </asp:UpdatePanel>
-      
-      
-          <a href="Create.aspx">../PlanView/Create.aspx</a><br/>
-    <a href="../MemberView/Index.aspx">../MemberView/Index.aspx</a><br/>
-    <a href="../MemberView/Insert.aspx">../MemberView/Insert.aspx</a><br/>
-    <a href="../ClaimView/Index.aspx">../ClaimView/Index.aspx</a><br/>
-    <a href="../ClaimView/Create.aspx">../ClaimView/Create.aspx</a>
-    
+      </td>
+      </tr>
+    </table>
             
   </div>
+  
+  
+  
+  
+
+    <div>
+        
+        &nbsp;
+      <asp:TextBox ID="txtsearch" runat="server"></asp:TextBox>
+      <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Search"/>
+    </div>
 </form>
+  
+  
+  <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p style="color: blue">Copyright &copy; DK 2016</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- jQuery -->
+
+  <script src="../scripts/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+
+  <script src="../scripts/bootstrap.min.js"></script>
+
+<!-- Script to Activate the Carousel -->
+<script>
+  $('.carousel')
+    .carousel({
+      interval: 5000 //changes the speed
+    })
+</script>
 </body>
 </html>
