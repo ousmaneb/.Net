@@ -120,19 +120,19 @@
               <asp:GridView ID="GridView1" runat="server"
                             AutoGenerateColumns="false"
                             CssClass="floatLeft"
-                RowStyle-CssClass="rowHover"
+                            RowStyle-CssClass="rowHover"
                             DataKeyNames="MemberId">
-          
-                
+
+
                 <Columns>
                   <asp:BoundField DataField="MemberId" HeaderText="Member Id" Visible="False"/>
-                  <asp:BoundField DataField="FirstName" HeaderText="First Name" />
-                  <asp:BoundField DataField="LastName" HeaderText="Last Name" />
-                  <asp:BoundField DataField="DOB" HeaderText="Date Of Birth" />
-                  <asp:BoundField DataField="Gender" HeaderText="Gender" />
-                  <asp:BoundField DataField="UserName" HeaderText="User Name" />
+                  <asp:BoundField DataField="FirstName" HeaderText="First Name"/>
+                  <asp:BoundField DataField="LastName" HeaderText="Last Name"/>
+                  <asp:BoundField DataField="DOB" HeaderText="Date Of Birth"/>
+                  <asp:BoundField DataField="Gender" HeaderText="Gender"/>
+                  <asp:BoundField DataField="UserName" HeaderText="User Name"/>
 
-                  <asp:TemplateField HeaderText="Plan Name" >
+                  <asp:TemplateField HeaderText="Plan Name">
                     <ItemTemplate>
                       <asp:Label ID="lblName" runat="server" Text='<%# Eval("Plan.PlanName") %>'></asp:Label>
                     </ItemTemplate>
@@ -154,18 +154,18 @@
               <asp:GridView ID="gvMember" runat="server" AutoGenerateColumns="false"
                             CssClass="floatRight"
                             OnRowCommand="gvMember_RowCommand"
-                RowStyle-CssClass="rowHover"
+                            RowStyle-CssClass="rowHover"
                             DataKeyNames="MemberId">
-                <HeaderStyle HorizontalAlign="Center" />
+
                 <Columns>
                   <asp:BoundField DataField="MemberId" HeaderText="Member Id" Visible="False"/>
-                  <asp:BoundField DataField="FirstName" HeaderText="First Name" />
-                  <asp:BoundField DataField="LastName" HeaderText="Last Name"  />
-                  <asp:BoundField DataField="DOB" HeaderText="Date Of Birth"  />
-                  <asp:BoundField DataField="Gender" HeaderText="Gender"  />
-                  <asp:BoundField DataField="UserName" HeaderText="User Name"  />
+                  <asp:BoundField DataField="FirstName" HeaderText="First Name"/>
+                  <asp:BoundField DataField="LastName" HeaderText="Last Name"/>
+                  <asp:BoundField DataField="DOB" HeaderText="Date Of Birth"/>
+                  <asp:BoundField DataField="Gender" HeaderText="Gender"/>
+                  <asp:BoundField DataField="UserName" HeaderText="User Name"/>
 
-                  <asp:TemplateField HeaderText="Plan Name"  >
+                  <asp:TemplateField HeaderText="Plan Name">
                     <ItemTemplate>
                       <asp:Label id="lblName" runat="server" Text='<%# Eval("Plan.PlanName") %>'></asp:Label>
                     </ItemTemplate>
@@ -180,7 +180,7 @@
                     </ItemTemplate>
 
                   </asp:TemplateField>
-                 
+
                 </Columns>
               </asp:GridView>
 
@@ -191,73 +191,79 @@
                                               TargetControlID="lbl"
                                               PopupControlID="Panel1"
                                               PopupDragHandleControlID="PopupHeader"
-                                              Drag="true"
-                                              BackgroundCssClass="bg-primary">
+                                              Drag="true">
               </ajaxToolkit:ModalPopupExtender>
 
 
               <div>
-                <asp:Panel ID="Panel1" Style="display: none" runat="server">
+                <asp:Panel ID="Panel1" runat="server" BackColor="lightgreen" BorderStyle="Solid"
+
+                           BorderWidth="5px" CssClass="panel" align-self="baseline">
+
 
                   <div class="modal-dialog modal-sm">
                     <div class="modal-header" id="PopupHeader">Update Member</div>
-                    <div class="modal-body">
-                      <div class="modal-content">
-                        <table class="table table-hover">
-                          <tr>
-                            <td>
-                              <label class="text-uppercase">First Name:</label>
-                            </td>
-                            <td>
-                              <asp:TextBox ID="firstname" runat="server" CssClass="form-control"></asp:TextBox>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <label class="text-uppercase">Last Name:</label>
-                            </td>
-                            <td>
-                              <asp:TextBox ID="lastname" runat="server" CssClass="form-control"></asp:TextBox>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <label class="text-uppercase">Date Of Birth:</label>
-                            </td>
-                            <td>
-                              <asp:TextBox ID="dob" runat="server" CssClass="form-control"></asp:TextBox>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <label class="text-uppercase">Gender:</label>
-                            </td>
-                            <td>
-                              <asp:TextBox ID="gender" runat="server" CssClass="form-control"></asp:TextBox>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <label class="text-uppercase">UserName:</label>
-                            </td>
-                            <td>
-                              <asp:TextBox ID="username" runat="server" CssClass="form-control"></asp:TextBox>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <label class="text-uppercase">Plan:</label>
-                            </td>
-                            <td>
-                              <asp:DropDownList ID="ddlPlan" runat="server" CssClass="form-control"></asp:DropDownList>
-                            </td>
-                          </tr>
 
-                        </table>
-                      </div>
+                    <table class="table-hover">
+                      <tr>
+                        <td>
+                          <label class="text-uppercase">First Name:</label>
+                        </td>
+                        <td>
+                          <asp:TextBox ID="firstname" runat="server" CssClass="form-control"></asp:TextBox>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="text-uppercase">Last Name:</label>
+                        </td>
+                        <td>
+                          <asp:TextBox ID="lastname" runat="server" CssClass="form-control"></asp:TextBox>
+                        </td>
+                      </tr>
 
+                      <tr>
+                        <td>
+                          <label class="text-uppercase">Date Of Birth:</label>
+                        </td>
+                        <td>
+                          <asp:TextBox ID="dob" runat="server" CssClass="form-control"/>
 
-                    </div>
+                          <ajaxToolkit:CalendarExtender ID="Calendar1" runat="server" TargetControlID="dob" Format="MM/dd/yyyy">
+                          </ajaxToolkit:CalendarExtender>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <label class="text-uppercase">Gender:</label>
+                        </td>
+                        <td>
+                          <asp:TextBox ID="gender" runat="server" CssClass="form-control"></asp:TextBox>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <label class="text-uppercase">UserName:</label>
+                        </td>
+                        <td>
+                          <asp:TextBox ID="username" runat="server" CssClass="form-control"></asp:TextBox>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="text-uppercase">Plan:</label>
+                        </td>
+                        <td>
+                          <asp:DropDownList ID="ddlPlan" runat="server" CssClass="form-control"></asp:DropDownList>
+                        </td>
+                      </tr>
+
+                    </table>
+
                     <div class="modal-footer">
                       <asp:Button ID="btnOkay" runat="server" OnClick="btnOkay_Click" Text="Update"/>
                       <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancel"/>
@@ -289,7 +295,9 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <p style="color: blue"><img src="../img/ob.png" width="40" height="40" />Copyright &copy; DK 2016</p>
+        <p style="color: blue">
+          <img src="../img/ob.png" width="40" height="40"/>Copyright &copy; DK 2016
+        </p>
       </div>
     </div>
   </div>

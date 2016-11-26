@@ -32,12 +32,8 @@ namespace PMCLibrary.BAL.Actions
       return PMCLibrary.DAL.Claim_DAL.GetAll();
     }
 
-    public ClaimModel Get(int id)
-    {
-      throw new NotImplementedException();
-    }
-
-        IEnumerable<ClaimModel> IAction<ClaimModel>.Get(int id)
+   
+        public IEnumerable<ClaimModel> Get(int id)
         {
             throw new NotImplementedException();
         }
