@@ -203,7 +203,7 @@
           <label class="text-uppercase">Plan:</label>
         </td>
         <td>
-          <asp:DropDownList ID="ddlPlan" runat="server"></asp:DropDownList>
+          <asp:DropDownList ID="ddlPlan" runat="server" Width="185px"></asp:DropDownList>
         </td>
       </tr>
       <tr>

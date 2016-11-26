@@ -230,12 +230,27 @@
                     </div>
                   </div>
 
+
                 </asp:Panel>
+
+
+                <%--  todo Add one  ModelPopup for Delete
+                        Add on Panel for Delete--%>
+
+
+                <asp:Label ID="lbl1" runat="server"></asp:Label>
+                <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender2"
+                                                runat="server"
+                                                TargetControlID="lbl1"
+                                                PopupControlID="Panel1"
+                                                PopupDragHandleControlID="PopupHeader1"
+                                                Drag="true">
+                </ajaxToolkit:ModalPopupExtender>
+
+
               </div>
 
 
-              <%--  todo Add one  ModelPopup for Delete
-                        Add on Panel for Delete--%>
             </ContentTemplate>
           </asp:UpdatePanel>
         </td>
@@ -258,7 +273,8 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <p style="color: blue"><img src="../img/ob.png" width="40" height="40"/>Copyright &copy; DK 2016
+        <p style="color: blue">
+          <img src="../img/ob.png" width="40" height="40"/>Copyright &copy; DK 2016
         </p>
       </div>
     </div>

@@ -114,7 +114,7 @@
           <label class="text-uppercase">MemberId </label> &nbsp;
         </td>
         <td>
-          <asp:DropDownList ID="ddlClaim" runat="server"></asp:DropDownList>
+          <asp:DropDownList ID="ddlClaim" runat="server" Width="184px"></asp:DropDownList>
         </td>
       </tr>
       

@@ -58,14 +58,18 @@ namespace AspWebForms.ClaimView
         BindDropDown();
 
         Label lbl1 = (Label) row.FindControl("lblFirstName");
-        Label lbl2 = (Label) row.FindControl("lblLastName");
-
-
         ddlFirstName.SelectedIndex = ddlFirstName.Items.IndexOf(ddlFirstName.Items.FindByText(lbl1.Text));
-        ddlLastName.SelectedIndex = ddlLastName.Items.IndexOf(ddlLastName.Items.FindByText(lbl2.Text));
-      
-        //txtUnitPrice.Text = row.Cells[3].Text;
         ViewState["Claim_id"] = gvClaim.DataKeys[index].Value;
+
+
+
+
+
+        Label lbl2 = (Label)row.FindControl("lblLastName");
+        ddlLastName.SelectedIndex = ddlLastName.Items.IndexOf(ddlLastName.Items.FindByText(lbl2.Text));
+        ViewState["Claim_id"] = gvClaim.DataKeys[index].Value;
+
+
 
         ModalPopupExtender1.Show();
       }
