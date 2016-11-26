@@ -9,9 +9,6 @@ namespace PMCLibrary.DAL
 {
   public class Plan_DAL
   {
-
-
-
     public static bool Insert(PlanModel o)
     {
       var result = false;
@@ -49,43 +46,80 @@ namespace PMCLibrary.DAL
     }
 
 
+    public static bool Update(PlanModel obj)
+    {
+      var result = false;
+      SqlConnection conn = null;
+      try
+      {
+        var conStr = DbHelper.GetConnectionString();
+        var query = "usp_Plan_Update";
+        conn = new SqlConnection(conStr);
+        var cmd = new SqlCommand(query, conn);
+        cmd.Parameters.AddWithValue("@Plan_id", obj.PlanId);
+        cmd.Parameters.AddWithValue("@Plan_Name", obj.PlanName);
+        cmd.Parameters.AddWithValue("@Plan_Descr", obj.Descr);
+        cmd.Parameters.AddWithValue("@Plan_DectValue", obj.DetuctibleValue);
+
+        cmd.CommandType = CommandType.StoredProcedure;
+        conn.Open();
+        result = cmd.ExecuteNonQuery() > 0 ? true : false;
+        conn.Close();
+      }
+
+      catch (Exception ex)
+      {
+        Console.WriteLine("An error occurred to update: '{0}'", ex);
+      }
+      finally
+      {
+        if (conn != null)
+          conn.Close();
+      }
+      return result;
+    }
 
 
-        public static bool Update(PlanModel obj)
-        {
-            bool result = false;
-            SqlConnection conn = null;
-            try
-            {
-                string conStr = DbHelper.GetConnectionString();
-                string query = "usp_Plan_Update";
-                conn = new SqlConnection(conStr);
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@Plan_id", obj.PlanId);
-                cmd.Parameters.AddWithValue("@Plan_Name", obj.PlanName);
-                cmd.Parameters.AddWithValue("@Plan_Descr", obj.Descr);
-                cmd.Parameters.AddWithValue("@Plan_DectValue", obj.DetuctibleValue);
-               
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                conn.Open();
-                result = cmd.ExecuteNonQuery() > 0 ? true : false;
-                conn.Close();
-            }
-
-            catch (Exception ex)
-            {
-            }
-            finally
-            {
-                if (conn != null)
-                    conn.Close();
-            }
-            return result;
-        }
 
 
+    public static bool Delete(int id)
+    {
+      var result = false;
+      SqlConnection conn = null;
+      try
+      {
+        var conStr = DbHelper.GetConnectionString();
+        var query = "usp_Plan_Delete";
+        conn = new SqlConnection(conStr);
+        var cmd = new SqlCommand(query, conn);
+        cmd.Parameters.AddWithValue("@Plan_id", id);
+        cmd.Parameters.AddWithValue("@Plan_Name", id);
+        cmd.Parameters.AddWithValue("@Plan_Descr", id);
+        cmd.Parameters.AddWithValue("@Plan_DectValue", id);
 
-        public static ICollection<PlanModel> GetAll()
+        cmd.CommandType = CommandType.StoredProcedure;
+        conn.Open();
+        result = cmd.ExecuteNonQuery() > 0 ? true : false;
+        conn.Close();
+      }
+
+      catch (Exception ex)
+      {
+        Console.WriteLine("An error occurred to delete: '{0}'", ex);
+      }
+      finally
+      {
+        if (conn != null)
+          conn.Close();
+      }
+      return result;
+    }
+
+
+
+
+
+    public static ICollection<PlanModel> GetAll()
     {
       ICollection<PlanModel> results = new List<PlanModel>();
       var conStr = DbHelper.GetConnectionString();

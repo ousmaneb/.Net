@@ -224,9 +224,9 @@
 
                     </table>
 
-                    <div class="modal-footer">
-                      <asp:Button ID="btnOkay" runat="server" OnClick="btnOkay_Click" Text="Update"/>
-                      <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancel"/>
+                    <div class="modal-footer"  style="text-align:center;">
+                      <asp:Button  CssClass="bfooter" ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Update"/>
+                      <asp:Button  CssClass="bfooter" ID="btnUCancel" runat="server" OnClick="btnUCancel_Click" Text="Cancel"/>
                     </div>
                   </div>
 
@@ -242,10 +242,59 @@
                 <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender2"
                                                 runat="server"
                                                 TargetControlID="lbl1"
-                                                PopupControlID="Panel1"
+                                                PopupControlID="Panel2"
                                                 PopupDragHandleControlID="PopupHeader1"
                                                 Drag="true">
                 </ajaxToolkit:ModalPopupExtender>
+                <asp:Panel ID="Panel2" runat="server" BackColor="lightgreen" BorderStyle="Solid"
+
+                           BorderWidth="5px" CssClass="panel" align-self="baseline">
+
+
+                  <div class="modal-dialog modal-sm">
+                    <div class="modal-header" id="PopupHeader1">Delete Plan:</div>
+                    <h6 style="color: red">Do you want to delete this record?</h6>
+                    <table class="table-hover">
+                      <tr>
+                        <td>
+                          <label class="text-uppercase">Plan:</label>
+                        </td>
+                        <td>
+                          <asp:DropDownList ID="ddlPlan1" runat="server" CssClass="form-control"></asp:DropDownList>
+                        </td>
+                      </tr>
+
+
+                      <tr>
+                        <td>
+                          <label class="text-uppercase">Description:</label>
+                        </td>
+                        <td>
+                          <asp:TextBox ID="descr1" runat="server" CssClass="form-control"></asp:TextBox>
+                        </td>
+                      </tr>
+
+
+                      <tr>
+                        <td>
+                          <label class="text-uppercase">Detuctible Value:</label>
+                        </td>
+                        <td>
+                          <asp:TextBox ID="dectval1" runat="server" CssClass="form-control"></asp:TextBox>
+                        </td>
+                      </tr>
+
+
+                    </table>
+
+                    <div class="modal-footer" style="text-align:center;">
+                      <asp:Button CssClass="bfooter" ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Delete" />
+                      <asp:Button CssClass="bfooter" ID="btnDCancel" runat="server" OnClick="btnDCancel_Click" Text="Cancel"/>
+                    </div>
+                  </div>
+
+
+                </asp:Panel>
 
 
               </div>

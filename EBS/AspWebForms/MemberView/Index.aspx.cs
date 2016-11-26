@@ -24,6 +24,11 @@ namespace AspWebForms.MemberView
       ddlPlan.DataValueField = "PlanId";
       ddlPlan.DataTextField = "PlanName";
       ddlPlan.DataBind();
+
+      ddlPlan1.DataSource = new PlanAction().Get();
+      ddlPlan1.DataValueField = "PlanId";
+      ddlPlan1.DataTextField = "PlanName";
+      ddlPlan1.DataBind();
     }
 
     private void BindData()
@@ -39,16 +44,6 @@ namespace AspWebForms.MemberView
       GridView1.DataBind();
     }
 
-    //protected void btnEdit_Click(object sender, EventArgs e)
-    //{
-
-    //    ModalPopupExtender1.Show();
-    //}
-
-    //protected void btnDelte_Click(object sender, EventArgs e)
-    //{
-
-    //}
     protected void gvMember_RowCommand(object sender, GridViewCommandEventArgs e)
     {
       var index = Convert.ToInt32(e.CommandArgument);
@@ -74,11 +69,27 @@ namespace AspWebForms.MemberView
       }
       else if (e.CommandName == "DeleteRow")
       {
+        //Get the value of command argument, i.e cuurent row index.
+
+        var row = gvMember.Rows[index];
+
+        firstname1.Text = row.Cells[1].Text;
+        lastname1.Text = row.Cells[2].Text;
+        dob1.Text = row.Cells[3].Text;
+        gender1.Text = row.Cells[4].Text;
+        username1.Text = row.Cells[5].Text;
+        BindDropDown();
+
+        var lbl1 = (Label)row.FindControl("lblName");
+        ddlPlan.SelectedIndex = ddlPlan.Items.IndexOf(ddlPlan.Items.FindByText(lbl1.Text));
+
         ViewState["Mem_id"] = gvMember.DataKeys[index].Value;
+
+        ModalPopupExtender2.Show();
       }
     }
 
-    protected void btnOkay_Click(object sender, EventArgs e)
+    protected void btnUpdate_Click(object sender, EventArgs e)
     {
       var obj = new MemberModel();
 
@@ -96,9 +107,23 @@ namespace AspWebForms.MemberView
       udp.Update();
     }
 
-    protected void btnCancel_Click(object sender, EventArgs e)
+    protected void btnDelete_Click(object sender, EventArgs e)
+    {
+
+
+      BindData();
+      udp.Update();
+    }
+
+    protected void btnUCancel_Click(object sender, EventArgs e)
     {
      
     }
+
+    protected void btnDCancel_Click(object sender, EventArgs e)
+    {
+
+    }
+
   }
 }

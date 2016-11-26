@@ -46,21 +46,23 @@ namespace PMCLibrary.DAL
 
     public static bool Update(ClaimModel obj)
     {
-      var result = false;
+      bool result = false;
       SqlConnection conn = null;
       try
       {
         string conStr = DbHelper.GetConnectionString();
         string query = "usp_Claim_Update";
         conn = new SqlConnection(conStr);
-        var cmd = new SqlCommand(query, conn);
-        cmd.Parameters.AddWithValue("@Claim_id", obj.ClaimId);
+        SqlCommand cmd = new SqlCommand(query, conn);
+
+       
+        cmd.Parameters.AddWithValue("@Mem_id", obj.MemberId);
         cmd.Parameters.AddWithValue("@Claim_Date", obj.ClaimDate);
         cmd.Parameters.AddWithValue("@Due_Date", obj.DueDate);
         cmd.Parameters.AddWithValue("@Claim_Amount", obj.ClaimAmount);
-        cmd.Parameters.AddWithValue("@Mem_id", obj.MemberId);
+        cmd.Parameters.AddWithValue("@Claim_id", obj.ClaimId);
 
-        cmd.CommandType = CommandType.StoredProcedure;
+        cmd.CommandType = System.Data.CommandType.StoredProcedure;
         conn.Open();
         result = cmd.ExecuteNonQuery() > 0 ? true : false;
         conn.Close();
@@ -69,6 +71,7 @@ namespace PMCLibrary.DAL
       catch (Exception ex)
       {
         Console.WriteLine("An error occurred to update: '{0}'", ex);
+        Console.ReadKey();
       }
       finally
       {

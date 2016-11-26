@@ -249,7 +249,7 @@
 
                       <tr>
                         <td>
-                          <label class="text-uppercase">First Name</label>
+                          <label class="text-uppercase">Last Name</label>
                         </td>
                         <td>
                           <asp:DropDownList ID="ddlLastName" runat="server" CssClass="form-control"></asp:DropDownList>
@@ -258,16 +258,96 @@
 
                     </table>
 
-                    <div class="modal-footer">
-                      <asp:Button ID="btnOkay" runat="server" OnClick="btnOkay_Click" Text="Update"/>
-                      <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancel"/>
+                    <div class="modal-footer"  style="text-align:center;">
+                      <asp:Button CssClass="bfooter" ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Update"/>
+                      <asp:Button CssClass="bfooter" ID="btnUCancel" runat="server" OnClick="btnUCancel_Click" Text="Cancel"/>
+                    </div>
+                  </div>
+
+                </asp:Panel>
+                 <%--  todo Add one  ModelPopup for Delete
+                        Add on Panel for Delete--%>
+
+                    <asp:Label ID="lbl1" runat="server"></asp:Label>
+              <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender2"
+                                              runat="server"
+                                              TargetControlID="lbl1"
+                                              PopupControlID="Panel2"
+                                              PopupDragHandleControlID="PopupHeader1"
+                                              Drag="true">
+              </ajaxToolkit:ModalPopupExtender>
+                 <asp:Panel ID="Panel2" runat="server" BackColor="lightgreen" BorderStyle="Solid"
+
+                           BorderWidth="5px" CssClass="panel" align-self="baseline">
+
+                  <div class="modal-dialog modal-sm">
+                    <div class="modal-header" id="PopupHeader1">Delete Claim</div>
+                     <h6 style="color: red">Do you want to delete this record?</h6>
+                    <table class="table-hover">
+                      <tr>
+                        <td>
+                          <label class="text-uppercase">Claim Date </label>
+                        </td>
+                        <td>
+                          <asp:TextBox ID="txtClaimDate1" runat="server" CssClass="form-control"/>
+
+                          <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" TargetControlID="txtClaimDate" Format="MM/dd/yyyy">
+                          </ajaxToolkit:CalendarExtender>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <label class="text-uppercase">Due Date </label>
+                        </td>
+                        <td>
+                          <asp:TextBox ID="txtDueDate1" runat="server" CssClass="form-control"/>
+
+                          <ajaxToolkit:CalendarExtender ID="CalendarExtender2" runat="server" TargetControlID="txtDueDate" Format="MM/dd/yyyy">
+                          </ajaxToolkit:CalendarExtender>
+                        </td>
+                      </tr>
+
+
+                      <tr>
+                        <td>
+                          <label class="text-uppercase">Claim Amount </label>
+                        </td>
+                        <td>
+                          <asp:TextBox ID="txtAmount1" runat="server" CssClass="form-control"></asp:TextBox>
+
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <label class="text-uppercase">First Name</label>
+                        </td>
+                        <td>
+                          <asp:DropDownList ID="ddlFirstName1" runat="server" CssClass="form-control"></asp:DropDownList>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <label class="text-uppercase">Last Name</label>
+                        </td>
+                        <td>
+                          <asp:DropDownList ID="ddlLastName1" runat="server" CssClass="form-control"></asp:DropDownList>
+                        </td>
+                      </tr>
+
+                    </table>
+
+                    <div class="modal-footer"  style="text-align:center;">
+                      <asp:Button CssClass="bfooter" ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Delete"/>
+                      <asp:Button CssClass="bfooter" ID="btnDCancel" runat="server" OnClick="btnDCancel_Click" Text="Cancel"/>
                     </div>
                   </div>
 
                 </asp:Panel>
               </div>
-              <%--  todo Add one  ModelPopup for Delete
-                        Add on Panel for Delete--%>
+             
 
             </ContentTemplate>
           </asp:UpdatePanel>

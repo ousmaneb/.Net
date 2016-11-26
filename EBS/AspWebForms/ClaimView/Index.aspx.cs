@@ -29,6 +29,17 @@ namespace AspWebForms.ClaimView
       ddlLastName.DataValueField = "MemberId";
       ddlLastName.DataTextField = "LastName";
       ddlLastName.DataBind();
+
+      ddlFirstName1.DataSource = new MemberAction().Get();
+      ddlFirstName1.DataValueField = "MemberId";
+      ddlFirstName1.DataTextField = "FirstName";
+      ddlFirstName1.DataBind();
+
+
+      ddlLastName1.DataSource = new MemberAction().Get();
+      ddlLastName1.DataValueField = "MemberId";
+      ddlLastName1.DataTextField = "LastName";
+      ddlLastName1.DataBind();
     }
 
     private void BindData()
@@ -75,11 +86,33 @@ namespace AspWebForms.ClaimView
       }
       else if (e.CommandName == "DeleteRow")
       {
+        //Get the value of command argument, i.e cuurent row index.
+
+        GridViewRow row = gvClaim.Rows[index];
+        txtClaimDate1.Text = row.Cells[1].Text;
+        txtDueDate1.Text = row.Cells[2].Text;
+        txtAmount1.Text = row.Cells[3].Text;
+        BindDropDown();
+
+        Label lbl3 = (Label)row.FindControl("lblFirstName");
+        ddlFirstName1.SelectedIndex = ddlFirstName1.Items.IndexOf(ddlFirstName1.Items.FindByText(lbl3.Text));
         ViewState["Claim_id"] = gvClaim.DataKeys[index].Value;
+
+
+
+
+
+        Label lbl4 = (Label)row.FindControl("lblLastName");
+        ddlLastName1.SelectedIndex = ddlLastName1.Items.IndexOf(ddlLastName1.Items.FindByText(lbl4.Text));
+        ViewState["Claim_id"] = gvClaim.DataKeys[index].Value;
+
+
+
+        ModalPopupExtender2.Show();
       }
     }
 
-    protected void btnOkay_Click(object sender, EventArgs e)
+    protected void btnUpdate_Click(object sender, EventArgs e)
     {
       ClaimModel obj = new ClaimModel();
 
@@ -98,7 +131,15 @@ namespace AspWebForms.ClaimView
       udp.Update();
     }
 
-    protected void btnCancel_Click(object sender, EventArgs e)
+
+    protected void btnDelete_Click(object sender, EventArgs e)
+    {
+    }
+    protected void btnUCancel_Click(object sender, EventArgs e)
+    {
+    }
+
+    protected void btnDCancel_Click(object sender, EventArgs e)
     {
     }
   }

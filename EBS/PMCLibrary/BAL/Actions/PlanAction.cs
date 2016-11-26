@@ -29,7 +29,7 @@ namespace PMCLibrary.BAL.Actions
 
     public bool Delete(int id)
     {
-      throw new NotImplementedException();
+      return Plan_DAL.Delete(id);
     }
 
     public bool Update(PlanModel o)

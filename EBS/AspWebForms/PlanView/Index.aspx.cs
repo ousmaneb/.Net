@@ -24,6 +24,12 @@ namespace AspWebForms.PlanView
       ddlPlan.DataValueField = "PlanId";
       ddlPlan.DataTextField = "PlanName";
       ddlPlan.DataBind();
+
+
+      ddlPlan1.DataSource = new PlanAction().Get();
+      ddlPlan1.DataValueField = "PlanId";
+      ddlPlan1.DataTextField = "PlanName";
+      ddlPlan1.DataBind();
     }
 
 
@@ -80,21 +86,20 @@ namespace AspWebForms.PlanView
 
 
         //ddlPlan.Text = row.Cells[1].Text;
-        descr.Text = row.Cells[2].Text;
-        dectVal.Text = row.Cells[3].Text;
+        descr1.Text = row.Cells[2].Text;
+        dectval1.Text = row.Cells[3].Text;
 
         BindDropDown();
         var lbl1 = (Label)row.FindControl("lblName");
-        ddlPlan.SelectedIndex = ddlPlan.Items.IndexOf(ddlPlan.Items.FindByText(lbl1.Text));
+        ddlPlan1.SelectedIndex = ddlPlan1.Items.IndexOf(ddlPlan1.Items.FindByText(lbl1.Text));
+        ViewState["Plan_id"] = gvPlan.DataKeys[index].Value;
 
-     
-        ViewState["PlanId"] = gvPlan.DataKeys[index].Value;
         ModalPopupExtender2.Show();
       }
     }
 
 
-    protected void btnOkay_Click(object sender, EventArgs e)
+    protected void btnUpdate_Click(object sender, EventArgs e)
     {
       var obj = new PlanModel();
 
@@ -108,16 +113,29 @@ namespace AspWebForms.PlanView
       var result = new PlanAction().Update(obj);
       BindData();
       udp.Update();
+      udp2.Update();
     }
 
-    protected void btnCancel_Click(object sender, EventArgs e)
+    protected void btnDelete_Click(object sender, EventArgs e)
     {
-      var obj = new PlanModel();
-
-
-      var result = new PlanAction().Update(obj);
+    
+      
       BindData();
       udp.Update();
     }
+
+
+    //DeleteItem (row.Cells[2].Text);
+
+
+
+    protected void btnUCancel_Click(object sender, EventArgs e)
+    {
+    }
+
+    protected void btnDCancel_Click(object sender, EventArgs e)
+    {
+    }
+
   }
 }
