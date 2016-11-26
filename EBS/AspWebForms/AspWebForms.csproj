@@ -115,6 +115,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\ob.png" />
     <Content Include="img\slide-1.png" />
     <Content Include="img\slide-2.jpg" />
     <Content Include="img\slide-3.jpg" />
