@@ -18,13 +18,10 @@ namespace PMCLibrary.BAL.Actions
 
     public bool Delete(int id)
     {
-      throw new NotImplementedException();
+      return Member_DAL.Delete(id);
     }
 
-    public bool Delete(MemberModel o)
-    {
-      return Member_DAL.Delete(o);
-    }
+ 
 
     public bool Update(MemberModel o)
     {

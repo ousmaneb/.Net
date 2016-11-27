@@ -93,10 +93,7 @@ namespace PMCLibrary.DAL
         conn = new SqlConnection(conStr);
         var cmd = new SqlCommand(query, conn);
         cmd.Parameters.AddWithValue("@Plan_id", id);
-        cmd.Parameters.AddWithValue("@Plan_Name", id);
-        cmd.Parameters.AddWithValue("@Plan_Descr", id);
-        cmd.Parameters.AddWithValue("@Plan_DectValue", id);
-
+    
         cmd.CommandType = CommandType.StoredProcedure;
         conn.Open();
         result = cmd.ExecuteNonQuery() > 0 ? true : false;

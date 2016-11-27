@@ -7,7 +7,7 @@ using PMCLibrary.Helper;
 
 namespace PMCLibrary.DAL
 {
-  internal class Claim_DAL
+  public class Claim_DAL
   {
     public static bool Insert(ClaimModel obj)
     {
@@ -73,6 +73,36 @@ namespace PMCLibrary.DAL
       {
         Console.WriteLine("An error occurred to update: '{0}'", ex);
         Console.ReadKey();
+      }
+      finally
+      {
+        if (conn != null)
+          conn.Close();
+      }
+      return result;
+    }
+
+    public static bool Delete(int id)
+    {
+      var result = false;
+      SqlConnection conn = null;
+      try
+      {
+        var conStr = DbHelper.GetConnectionString();
+        var query = "usp_Claim_Delete";
+        conn = new SqlConnection(conStr);
+        var cmd = new SqlCommand(query, conn);
+        cmd.Parameters.AddWithValue("@Claim_id", id);
+
+        cmd.CommandType = CommandType.StoredProcedure;
+        conn.Open();
+        result = cmd.ExecuteNonQuery() > 0 ? true : false;
+        conn.Close();
+      }
+
+      catch (Exception ex)
+      {
+        Console.WriteLine("An error occurred to delete: '{0}'", ex);
       }
       finally
       {

@@ -7,7 +7,7 @@ using PMCLibrary.Helper;
 
 namespace PMCLibrary.DAL
 {
-  internal class Member_DAL
+  public class Member_DAL
   {
     public static bool Insert(MemberModel obj)
     {
@@ -84,7 +84,7 @@ namespace PMCLibrary.DAL
             return result;
         }
 
-    public static bool Delete(MemberModel obj)
+    public static bool Delete(int id)
     {
       bool result = false;
       SqlConnection conn = null;
@@ -95,14 +95,7 @@ namespace PMCLibrary.DAL
         conn = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand(query, conn);
 
-
-        cmd.Parameters.AddWithValue("FName", obj.FirstName);
-        cmd.Parameters.AddWithValue("@LName", obj.Lastname);
-        cmd.Parameters.AddWithValue("@DOB", obj.Dob);
-        cmd.Parameters.AddWithValue("@Gender", obj.Gender);
-        cmd.Parameters.AddWithValue("@UserName", obj.Username);
-        cmd.Parameters.AddWithValue("@Plan_id", obj.PlanId);
-        cmd.Parameters.AddWithValue("@Mem_id", obj.MemberId);
+        cmd.Parameters.AddWithValue("@Mem_id", id);
 
 
         cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -113,7 +106,7 @@ namespace PMCLibrary.DAL
 
       catch (Exception ex)
       {
-        Console.WriteLine("An error occurred to update: '{0}'", ex);
+        Console.WriteLine("An error occurred to delete: '{0}'", ex);
       }
       finally
       {

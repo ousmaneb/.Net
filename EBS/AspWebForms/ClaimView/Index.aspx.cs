@@ -3,6 +3,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using PMCLibrary.BAL.Actions;
 using PMCLibrary.BAL.Model;
+using PMCLibrary.DAL;
 
 namespace AspWebForms.ClaimView
 {
@@ -136,6 +137,10 @@ namespace AspWebForms.ClaimView
 
     protected void btnDelete_Click(object sender, EventArgs e)
     {
+      Claim_DAL.Delete(Convert.ToInt32(ViewState["Claim_id"]));
+      BindData();
+
+      udp.Update();
     }
     protected void btnUCancel_Click(object sender, EventArgs e)
     {

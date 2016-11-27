@@ -3,6 +3,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using PMCLibrary.BAL.Actions;
 using PMCLibrary.BAL.Model;
+using PMCLibrary.DAL;
 
 namespace AspWebForms.PlanView
 {
@@ -118,7 +119,8 @@ namespace AspWebForms.PlanView
 
     protected void btnDelete_Click(object sender, EventArgs e)
     {
-    
+
+      Plan_DAL.Delete(Convert.ToInt32(ViewState["Plan_id"]));
       
       BindData();
       

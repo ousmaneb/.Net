@@ -19,7 +19,7 @@ namespace PMCLibrary.BAL.Actions
 
     public bool Delete(int id)
     {
-      throw new NotImplementedException();
+      return Claim_DAL.Delete(id);
     }
 
     public bool Update(ClaimModel o)

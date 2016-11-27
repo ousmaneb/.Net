@@ -3,6 +3,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using PMCLibrary.BAL.Actions;
 using PMCLibrary.BAL.Model;
+using PMCLibrary.DAL;
 
 namespace AspWebForms.MemberView
 {
@@ -109,6 +110,7 @@ namespace AspWebForms.MemberView
 
     protected void btnDelete_Click(object sender, EventArgs e)
     {
+      Member_DAL.Delete(Convert.ToInt32(ViewState["Mem_id"]));
 
 
       BindData();
