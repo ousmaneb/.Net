@@ -118,8 +118,8 @@
                             DataKeyNames="ClaimId">
                 <Columns>
                   <asp:BoundField DataField="ClaimId" HeaderText="Claim Id" Visible="False"/>
-                  <asp:BoundField DataField="ClaimDate" HeaderText="Claim Date"/>
-                  <asp:BoundField DataField="DueDate" HeaderText="Due Date"/>
+                  <asp:BoundField DataField="ClaimDate" HeaderText="Claim Date"  HtmlEncode="false" DataFormatString="{0:MM/dd/yyyy}"/>
+                  <asp:BoundField DataField="DueDate" HeaderText="Due Date"  HtmlEncode="false" DataFormatString="{0:MM/dd/yyyy}"/>
                   <asp:BoundField DataField="ClaimAmount" HeaderText="Claim Amount"/>
 
 
@@ -151,11 +151,12 @@
                             CssClass="floatRight"
                             OnRowCommand="gvClaim_RowCommand"
                             RowStyle-CssClass="rowHover"
-                            DataKeyNames="ClaimId">
+                            DataKeyNames="ClaimId"
+                            >
                 <Columns>
                   <asp:BoundField DataField="ClaimId" HeaderText="Claim Id" Visible="False"/>
-                  <asp:BoundField DataField="ClaimDate" HeaderText="Claim Date"/>
-                  <asp:BoundField DataField="DueDate" HeaderText="Due Date"/>
+                  <asp:BoundField DataField="ClaimDate" HeaderText="Claim Date" HtmlEncode="false" DataFormatString="{0:MM/dd/yyyy}"/>
+                  <asp:BoundField DataField="DueDate" HeaderText="Due Date" HtmlEncode="false" DataFormatString="{0:MM/dd/yyyy}" />
                   <asp:BoundField DataField="ClaimAmount" HeaderText="Claim Amount"/>
 
 

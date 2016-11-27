@@ -123,7 +123,9 @@ namespace AspWebForms.ClaimView
       obj.Member.FirstName = ddlFirstName.SelectedItem.Text;
       obj.Member.Lastname = ddlLastName.SelectedItem.Text;
 
-  
+      obj.MemberId = Convert.ToInt32(ddlFirstName.SelectedValue);
+      obj.MemberId = Convert.ToInt32(ddlLastName.SelectedValue);
+
       obj.ClaimId = Convert.ToInt32(ViewState["Claim_id"]);
 
       bool result = new ClaimAction().Update(obj);

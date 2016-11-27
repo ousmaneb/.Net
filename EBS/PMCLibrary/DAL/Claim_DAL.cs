@@ -56,10 +56,11 @@ namespace PMCLibrary.DAL
         SqlCommand cmd = new SqlCommand(query, conn);
 
        
-        cmd.Parameters.AddWithValue("@Mem_id", obj.MemberId);
+        
         cmd.Parameters.AddWithValue("@Claim_Date", obj.ClaimDate);
         cmd.Parameters.AddWithValue("@Due_Date", obj.DueDate);
         cmd.Parameters.AddWithValue("@Claim_Amount", obj.ClaimAmount);
+        cmd.Parameters.AddWithValue("@Mem_id", obj.MemberId);
         cmd.Parameters.AddWithValue("@Claim_id", obj.ClaimId);
 
         cmd.CommandType = System.Data.CommandType.StoredProcedure;
