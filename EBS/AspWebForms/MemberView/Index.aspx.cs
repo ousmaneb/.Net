@@ -104,14 +104,25 @@ namespace AspWebForms.MemberView
       obj.MemberId = Convert.ToInt32(ViewState["Mem_id"]);
 
       var result = new MemberAction().Update(obj);
+
+      if (result)
+        Label1.Text = "Member Has Been Updated Successfully!";
+      else
+        Label1.Text = "Error to delete -> " + result;
+
       BindData();
       udp.Update();
     }
 
     protected void btnDelete_Click(object sender, EventArgs e)
     {
-      Member_DAL.Delete(Convert.ToInt32(ViewState["Mem_id"]));
+     bool msg =  Member_DAL.Delete(Convert.ToInt32(ViewState["Mem_id"]));
 
+
+      if (msg == true)
+        Label1.Text = "Member Has Been Deleted Successfully!";
+      else
+        Label1.Text = "Error to delete -> " + msg;
 
       BindData();
       udp.Update();

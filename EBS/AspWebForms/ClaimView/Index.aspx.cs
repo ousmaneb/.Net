@@ -130,6 +130,13 @@ namespace AspWebForms.ClaimView
       obj.ClaimId = Convert.ToInt32(ViewState["Claim_id"]);
 
       bool result = new ClaimAction().Update(obj);
+
+
+      if (result==true)
+        Label1.Text = "Claim Has Been Updated Successfully!";
+      else
+        Label1.Text = "Error to delete -> " + result;
+
       BindData();
       udp.Update();
     }
@@ -137,7 +144,15 @@ namespace AspWebForms.ClaimView
 
     protected void btnDelete_Click(object sender, EventArgs e)
     {
-      Claim_DAL.Delete(Convert.ToInt32(ViewState["Claim_id"]));
+     bool msg = Claim_DAL.Delete(Convert.ToInt32(ViewState["Claim_id"]));
+
+
+      if (msg == true)
+        Label1.Text = "Claim Has Been Deleted Successfully!";
+      else
+        Label1.Text = "Error -> " + msg;
+
+
       BindData();
 
       udp.Update();

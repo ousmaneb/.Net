@@ -165,8 +165,6 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="PlanView\Create.aspx" />
-    <Content Include="PlanView\Delete.aspx" />
-    <Content Include="PlanView\Edit.aspx" />
     <Content Include="PlanView\Index.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
@@ -278,20 +276,6 @@
     </Compile>
     <Compile Include="PlanView\Create.aspx.designer.cs">
       <DependentUpon>Create.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PlanView\Delete.aspx.cs">
-      <DependentUpon>Delete.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PlanView\Delete.aspx.designer.cs">
-      <DependentUpon>Delete.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PlanView\Edit.aspx.cs">
-      <DependentUpon>Edit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PlanView\Edit.aspx.designer.cs">
-      <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="PlanView\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

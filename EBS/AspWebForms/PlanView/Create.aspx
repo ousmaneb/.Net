@@ -17,8 +17,6 @@
   <link href="../Content/bootstrap.min.css" rel="stylesheet"/>
 
 
-
-
   <!-- Bootstrap Core CSS -->
   <link href="../Content/bootstrap.min.css" rel="stylesheet"/>
 
@@ -36,7 +34,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-    <style>
+  <style>
       
     @import url('../PlanView/StyleSheet.less');
 
@@ -107,11 +105,11 @@
 
 
 <form id="form1" runat="server">
-
+  <asp:ScriptManager id="xyz" runat="server"></asp:ScriptManager>
 
   <div>
     <h1 class="title1">Create New Plan</h1>
-    <table class="t">
+    <table class="table-hover">
 
 
       <tr>
@@ -135,7 +133,7 @@
                                           BackColor="yellow"/>
         </td>
       </tr>
-    
+
       <tr>
         <td>
           <label>Description</label>
@@ -149,7 +147,7 @@
                                           BackColor="yellow"/>
         </td>
       </tr>
-    
+
       <tr>
         <td>
           <label>Detuctible Value</label>&nbsp;
@@ -160,17 +158,19 @@
                                           ControlToValidate="txtDetuc"
                                           ValidationExpression="^\d+(\.\d\d)?$"
                                           Text="Enter a positive number" SetFocusOnError="true"
-                                          BackColor="yellow"/> 
+                                          BackColor="yellow"/>
         </td>
       </tr>
-      
+
       <tr>
         <td>
-          
-          <asp:Button ID="btnCreate" runat="server" Text="Create" OnClick="btnCreate_Click"  CssClass="btn btn-primary"/>
+
+          <asp:Button ID="btnCreate" runat="server" Text="Create" OnClick="btnCreate_Click" CssClass="btn btn-primary"/>
         </td>
         <td>
-          <asp:Label ID="lblResult" runat="server"></asp:Label>
+          <h6 style="color: red">
+            <asp:Label ID="lblResult" runat="server"></asp:Label>
+          </h6>
         </td>
       </tr>
 
@@ -179,26 +179,22 @@
 
   </div>
 
-
+    <br/>   <br/>   <br/>   <br/>   <br/> <br/>   <br/>  <br/> <br/>
 </form>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
 
 <footer>
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <p style="color: blue">
-          <img src="../img/ob.png" width="40" height="40" />Copyright &copy; DK 2016</p>
+        
+           
+                <p style="color: blue">
+                <img src="../img/ob.png" width="40" height="40"/>Copyright &copy; DK 2016
+                      </p>
+    
+          
+      
       </div>
     </div>
   </div>
@@ -207,10 +203,10 @@
 
 <!-- jQuery -->
 
-  <script src="../scripts/jquery.js"></script>
+<script src="../scripts/jquery.js"></script>
 <!-- Bootstrap Core JavaScript -->
 
-  <script src="../scripts/bootstrap.min.js"></script>
+<script src="../scripts/bootstrap.min.js"></script>
 
 <!-- Script to Activate the Carousel -->
 <script>

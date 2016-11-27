@@ -185,7 +185,9 @@
 
                 </Columns>
               </asp:GridView>
-
+                           <h6 style="color: red">
+    <asp:Label ID="Label1" runat="server" EnableViewState="False"></asp:Label>
+ </h6>
 
               <asp:Label ID="lbl" runat="server"></asp:Label>
               <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender1"

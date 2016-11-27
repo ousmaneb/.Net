@@ -35,6 +35,7 @@
     <style>
       
         @import url('../PlanView/StyleSheet.less');
+      
 
     </style>
     
@@ -164,36 +165,27 @@
         <td>
           <asp:Button ID="btnCreate" runat="server" CssClass="btn btn-primary" OnClick="btnCreate_Click" Text="Create"/>
         </td>
-      </tr>
-      
-      <tr>
-        <td>
-          <asp:Label ID="lblResult" runat="server"></asp:Label>
+         <td>
+          <h6 style="color: red">
+            <asp:Label ID="lblResult" runat="server"></asp:Label>
+          </h6>
         </td>
       </tr>
-
+      
+    
     </table>
-  
+
 
       
       
     
   </div>
   
-
+<br/>   <br/>   <br/>   <br/>   <br/> <br/>   <br/>  <br/>
 </form>
-  <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-  <br/>
 
-   <footer>
+
+   <footer >
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">

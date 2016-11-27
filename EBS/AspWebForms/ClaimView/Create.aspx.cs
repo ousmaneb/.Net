@@ -49,6 +49,11 @@ namespace AspWebForms.ClaimView
 
 
       var result = new ClaimAction().Insert(model);
+
+      if (result == true)
+        lblResult.Text = "Claim Has Been Added Successfully! ";
+      else
+        lblResult.Text = "Claim Is Not Added ";
     }
   }
 }

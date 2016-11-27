@@ -78,7 +78,6 @@ namespace AspWebForms.PlanView
         ViewState["Plan_id"] = gvPlan.DataKeys[index].Value;
 
         ModalPopupExtender1.Show();
-      
       }
       else if (e.CommandName == "DeleteRow")
       {
@@ -91,7 +90,7 @@ namespace AspWebForms.PlanView
         dectval1.Text = row.Cells[3].Text;
 
         BindDropDown();
-        var lbl1 = (Label)row.FindControl("lblName");
+        var lbl1 = (Label) row.FindControl("lblName");
         ddlPlan1.SelectedIndex = ddlPlan1.Items.IndexOf(ddlPlan1.Items.FindByText(lbl1.Text));
         ViewState["Plan_id"] = gvPlan.DataKeys[index].Value;
 
@@ -112,24 +111,32 @@ namespace AspWebForms.PlanView
       obj.PlanId = Convert.ToInt32(ViewState["Plan_id"]);
 
       var result = new PlanAction().Update(obj);
+
+      if (result)
+        Label1.Text = "Plan Has Been Updated Successfully!";
+      else
+        Label1.Text = "Error to delete -> " + result;
+
       BindData();
       udp.Update();
-      udp2.Update();
     }
 
     protected void btnDelete_Click(object sender, EventArgs e)
     {
+      var msg = Plan_DAL.Delete(Convert.ToInt32(ViewState["Plan_id"]));
 
-      Plan_DAL.Delete(Convert.ToInt32(ViewState["Plan_id"]));
-      
+      if (msg)
+        Label1.Text = "Plan Has Been Deleted Successfully!";
+      else
+        Label1.Text = "Error to delete -> " + msg;
+
       BindData();
-      
+
       udp.Update();
     }
 
 
     //DeleteItem (row.Cells[2].Text);
-
 
 
     protected void btnUCancel_Click(object sender, EventArgs e)
@@ -139,6 +146,5 @@ namespace AspWebForms.PlanView
     protected void btnDCancel_Click(object sender, EventArgs e)
     {
     }
-
   }
 }
