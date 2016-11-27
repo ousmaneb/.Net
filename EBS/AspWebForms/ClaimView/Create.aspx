@@ -112,7 +112,7 @@
       
           <tr>
         <td>
-          <label class="text-uppercase">MemberId </label> &nbsp;
+          <label class="text-uppercase">MemberId<sup style="color: red">*</sup> </label> &nbsp;
         </td>
         <td>
           <asp:DropDownList ID="ddlClaim" runat="server" Width="184px"></asp:DropDownList>
@@ -122,7 +122,7 @@
 
       <tr>
         <td>
-          <label class="text-uppercase">Claim Date </label> &nbsp;
+          <label class="text-uppercase">Claim Date<sup style="color: red">*</sup> </label> &nbsp;
         </td>
         <td>
           <asp:TextBox ID="txtClaimDate" runat="server"/>
@@ -134,7 +134,7 @@
       
             <tr>
         <td>
-          <label class="text-uppercase">Due Date </label> &nbsp;
+          <label class="text-uppercase">Due Date <sup style="color: red">*</sup></label> &nbsp;
         </td>
         <td>
           <asp:TextBox ID="txtDueDate" runat="server"/>
@@ -149,7 +149,7 @@
 
       <tr>
         <td>
-          <label class="text-uppercase">Claim Amount </label> &nbsp;
+          <label class="text-uppercase">Claim Amount <sup style="color: red">*</sup></label> &nbsp;
         </td>
         <td>
           <asp:TextBox ID="txtAmount" runat="server"></asp:TextBox>
@@ -181,9 +181,9 @@
     
   </div>
   
-<br/>   <br/>   <br/>   <br/>   <br/> <br/>   <br/>  <br/>
-</form>
 
+</form>
+<br/>   <br/>   <br/>   <br/>   <br/> <br/>   <br/>  <br/>
 
    <footer >
     <div class="container">
