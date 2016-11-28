@@ -263,7 +263,7 @@
                           <label class="text-uppercase">Plan:</label>
                         </td>
                         <td>
-                          <asp:DropDownList ID="ddlPlan1" runat="server" CssClass="form-control"></asp:DropDownList>
+                          <asp:DropDownList ID="ddlPlan1" runat="server" CssClass="form-control" Enabled="False"></asp:DropDownList>
                         </td>
                       </tr>
 
@@ -273,7 +273,7 @@
                           <label class="text-uppercase">Description:</label>
                         </td>
                         <td>
-                          <asp:TextBox ID="descr1" runat="server" CssClass="form-control"></asp:TextBox>
+                          <asp:TextBox ID="descr1" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
                         </td>
                       </tr>
 
@@ -283,7 +283,7 @@
                           <label class="text-uppercase">Detuctible Value:</label>
                         </td>
                         <td>
-                          <asp:TextBox ID="dectval1" runat="server" CssClass="form-control"></asp:TextBox>
+                          <asp:TextBox ID="dectval1" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
                         </td>
                       </tr>
 

@@ -293,7 +293,7 @@
                           <label class="text-uppercase">Claim Date </label>
                         </td>
                         <td>
-                          <asp:TextBox ID="txtClaimDate1" runat="server" CssClass="form-control"/>
+                          <asp:TextBox ID="txtClaimDate1" runat="server" CssClass="form-control" Enabled="False"/>
 
                           <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" TargetControlID="txtClaimDate" Format="MM/dd/yyyy">
                           </ajaxToolkit:CalendarExtender>
@@ -305,7 +305,7 @@
                           <label class="text-uppercase">Due Date </label>
                         </td>
                         <td>
-                          <asp:TextBox ID="txtDueDate1" runat="server" CssClass="form-control"/>
+                          <asp:TextBox ID="txtDueDate1" runat="server" CssClass="form-control" Enabled="False"/>
 
                           <ajaxToolkit:CalendarExtender ID="CalendarExtender2" runat="server" TargetControlID="txtDueDate" Format="MM/dd/yyyy">
                           </ajaxToolkit:CalendarExtender>
@@ -318,7 +318,7 @@
                           <label class="text-uppercase">Claim Amount </label>
                         </td>
                         <td>
-                          <asp:TextBox ID="txtAmount1" runat="server" CssClass="form-control"></asp:TextBox>
+                          <asp:TextBox ID="txtAmount1" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
 
                         </td>
                       </tr>
@@ -328,7 +328,7 @@
                           <label class="text-uppercase">First Name</label>
                         </td>
                         <td>
-                          <asp:DropDownList ID="ddlFirstName1" runat="server" CssClass="form-control"></asp:DropDownList>
+                          <asp:DropDownList ID="ddlFirstName1" runat="server" CssClass="form-control" Enabled="False"></asp:DropDownList>
                         </td>
                       </tr>
 
@@ -337,7 +337,7 @@
                           <label class="text-uppercase">Last Name</label>
                         </td>
                         <td>
-                          <asp:DropDownList ID="ddlLastName1" runat="server" CssClass="form-control"></asp:DropDownList>
+                          <asp:DropDownList ID="ddlLastName1" runat="server" CssClass="form-control" Enabled="False"></asp:DropDownList>
                         </td>
                       </tr>
 

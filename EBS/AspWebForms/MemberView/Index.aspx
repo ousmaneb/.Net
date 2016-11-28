@@ -303,7 +303,7 @@
             <label class="text-uppercase">First Name:</label>
           </td>
           <td>
-            <asp:TextBox ID="firstname1" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="firstname1" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
           </td>
         </tr>
         <tr>
@@ -311,7 +311,7 @@
             <label class="text-uppercase">Last Name:</label>
           </td>
           <td>
-            <asp:TextBox ID="lastname1" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="lastname1" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
           </td>
         </tr>
 
@@ -320,7 +320,7 @@
             <label class="text-uppercase">Date Of Birth:</label>
           </td>
           <td>
-            <asp:TextBox ID="dob1" runat="server" CssClass="form-control"/>
+            <asp:TextBox ID="dob1" runat="server" CssClass="form-control" Enabled="False"/>
 
             <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" TargetControlID="dob" Format="MM/dd/yyyy">
             </ajaxToolkit:CalendarExtender>
@@ -334,7 +334,7 @@
             <label class="text-uppercase">Gender:</label>
           </td>
           <td>
-            <asp:TextBox ID="gender1" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="gender1" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
           </td>
         </tr>
 
@@ -343,7 +343,7 @@
             <label class="text-uppercase">UserName:</label>
           </td>
           <td>
-            <asp:TextBox ID="username1" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="username1" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
           </td>
         </tr>
         <tr>
@@ -351,7 +351,7 @@
             <label class="text-uppercase">Plan:</label>
           </td>
           <td>
-            <asp:DropDownList ID="ddlPlan1" runat="server" CssClass="form-control"></asp:DropDownList>
+            <asp:DropDownList ID="ddlPlan1" runat="server" CssClass="form-control" Enabled="False"></asp:DropDownList>
           </td>
         </tr>
 
