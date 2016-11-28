@@ -14,6 +14,7 @@
   <meta name="author" content=""/>
 
   <title>Plan View</title>
+       <link rel="shortcut icon" href="../img/ob.png" />
   <link rel="stylesheet" type="text/css" href="StyleSheet.less"/>
 
   <link href="../Content/bootstrap.min.css" rel="stylesheet"/>

@@ -10,6 +10,7 @@
   <meta name="description" content=""/>
   <meta name="author" content=""/>
   <title> ClaimView </title>
+       <link rel="shortcut icon" href="../img/ob.png" />
   <link rel="stylesheet" type="text/css" href="../PlanView/StyleSheet.less"/>
   <link href="../Content/bootstrap.min.css" rel="stylesheet"/>
 

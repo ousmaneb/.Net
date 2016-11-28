@@ -10,6 +10,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Create Claim</title>
+       <link rel="shortcut icon" href="../img/ob.png" />
   <link href="../Content/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" type="text/css" href="../PlanView/StyleSheet.less"/>
   <script src="../scripts/bootstrap-datepicker.js"></script>

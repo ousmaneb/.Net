@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Create Member</title>
+       <link rel="shortcut icon" href="../img/ob.png" />
     <link rel="stylesheet" type="text/css" href="StyleSheet.less"/>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>

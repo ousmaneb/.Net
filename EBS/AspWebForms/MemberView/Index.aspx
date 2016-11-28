@@ -13,6 +13,7 @@
   <meta name="author" content=""/>
 
   <title>MemberView</title>
+       <link rel="shortcut icon" href="../img/ob.png" />
   <link rel="stylesheet" type="text/css" href="../PlanView/StyleSheet.less"/>
   <link href="../Content/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" type="text/css" href="StyleSheet.less"/>
