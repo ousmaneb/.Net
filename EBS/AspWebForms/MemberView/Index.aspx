@@ -122,7 +122,7 @@
           <td>
             <asp:TextBox ID="dob" runat="server" CssClass="form-control"/>
 
-            <ajaxToolkit:CalendarExtender ID="Calendar1" runat="server" TargetControlID="dob" Format="MM/dd/yyyy">
+            <ajaxToolkit:CalendarExtender ID="Calendar1" runat="server" TargetControlID="dob" >
             </ajaxToolkit:CalendarExtender>
 
           </td>

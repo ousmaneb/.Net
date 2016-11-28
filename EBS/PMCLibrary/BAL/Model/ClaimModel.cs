@@ -8,20 +8,20 @@ namespace PMCLibrary.BAL.Model
 
     public int ClaimId { get; set; }
     public int MemberId { get; set; }
-    public DateTime ClaimDate { get; set; }
-    public DateTime DueDate { get; set; }
+    public string ClaimDate { get; set; }
+    public string DueDate { get; set; }
     public double ClaimAmount { get; set; }
     public MemberModel Member { get; set; }
 
     public ClaimModel()
     {
-      ClaimDate = DateTime.Today;
-      DueDate = DateTime.Today;
+      ClaimDate = string.Empty;
+      DueDate = string.Empty;
       Member = new MemberModel();
     }
 
 
-    public ClaimModel(int memid, DateTime claimdate, DateTime duedate, double claimamount)
+    public ClaimModel(int memid, string claimdate, string duedate, double claimamount)
     {
       MemberId = memid;
       ClaimDate = claimdate;

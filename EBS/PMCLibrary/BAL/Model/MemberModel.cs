@@ -9,7 +9,7 @@ namespace PMCLibrary.BAL.Model
         public int MemberId { get; set; }
         public string FirstName { get; set; }
         public string Lastname { get; set; }
-        public DateTime Dob { get; set; }
+        public string Dob { get; set; }
         public string Gender { get; set; }
         public string Username { get; set; }
         public int PlanId { get; set; }
@@ -20,12 +20,12 @@ namespace PMCLibrary.BAL.Model
         {
             FirstName = string.Empty;
             Lastname = string.Empty;
-          Dob = DateTime.Today;
+          Dob = string.Empty;
             Gender = string.Empty;
             Username = string.Empty;
             Plan = new PlanModel();
         }
-        public MemberModel(int planid, string firstname, string lastname, DateTime dob, string gender, string username)
+        public MemberModel(int planid, string firstname, string lastname, string dob, string gender, string username)
         {
             PlanId = planid;
             FirstName = firstname;

@@ -43,8 +43,8 @@ namespace AspWebForms.ClaimView
         return;
 
       var model = new ClaimModel(Convert.ToInt32(ddlClaim.SelectedValue),
-        Convert.ToDateTime(txtClaimDate.Text),
-        Convert.ToDateTime(txtDueDate.Text),
+        Convert.ToDateTime(txtClaimDate.Text).ToShortDateString(),
+        Convert.ToDateTime(txtDueDate.Text).ToShortDateString(),
         Convert.ToDouble(txtAmount.Text));
 
 

@@ -130,8 +130,8 @@ namespace PMCLibrary.DAL
           var obj = new ClaimModel();
           obj.ClaimId = Convert.ToInt32(dr["Claim_id"]);
           obj.MemberId = Convert.ToInt32(dr["Mem_id"]);
-          obj.ClaimDate = Convert.ToDateTime(dr["Claim_Date"]);
-          obj.DueDate = Convert.ToDateTime(dr["Due_Date"]) ;
+          obj.ClaimDate = Convert.ToDateTime(dr["Claim_Date"]).ToShortDateString();
+          obj.DueDate = Convert.ToDateTime(dr["Due_Date"]).ToShortDateString() ;
           obj.ClaimAmount = Convert.ToDouble(dr["Claim_Amount"]);
           obj.Member.FirstName = dr["FName"].ToString();
           obj.Member.Lastname = dr["LName"].ToString();
