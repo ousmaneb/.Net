@@ -34,7 +34,7 @@ namespace AspWebForms.MemberView
       var model = new MemberModel(Convert.ToInt32(ddlPlan.SelectedValue),
         txtFirstName.Text,
         txtLastName.Text,
-        txtDateOfBirth.Text,
+        Convert.ToDateTime(txtDateOfBirth.Text),
         txtGender.Text,
         txtUserName.Text);
 

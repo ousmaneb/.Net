@@ -135,7 +135,7 @@ namespace PMCLibrary.DAL
           obj.MemberId = Convert.ToInt32(dr["Mem_id"]);
           obj.FirstName = dr["FName"].ToString();
           obj.Lastname = dr["LName"].ToString();
-          obj.Dob = dr["DOB"].ToString();
+          obj.Dob = Convert.ToDateTime(dr["DOB"]);
           obj.Gender = dr["Gender"].ToString();
           obj.Username = dr["UserName"].ToString();
           obj.Plan.PlanName = dr["Plan_Name"].ToString();

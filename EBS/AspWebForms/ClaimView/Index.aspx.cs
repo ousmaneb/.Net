@@ -117,8 +117,8 @@ namespace AspWebForms.ClaimView
     {
       ClaimModel obj = new ClaimModel();
 
-      obj.ClaimDate = txtClaimDate.Text;
-      obj.DueDate = txtDueDate.Text;
+      obj.ClaimDate = Convert.ToDateTime(txtClaimDate.Text);
+      obj.DueDate = Convert.ToDateTime(txtDueDate.Text);
       obj.ClaimAmount = Convert.ToDouble(txtAmount.Text);
 
       obj.Member.FirstName = ddlFirstName.SelectedItem.Text;

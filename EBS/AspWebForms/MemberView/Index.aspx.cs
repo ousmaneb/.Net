@@ -100,7 +100,7 @@ namespace AspWebForms.MemberView
 
       obj.FirstName = firstname.Text;
       obj.Lastname = lastname.Text;
-      obj.Dob = dob.Text;
+      obj.Dob = Convert.ToDateTime(dob.Text);
       obj.Gender = gender.Text;
       obj.Username = username.Text;
 
