@@ -129,6 +129,14 @@
          
           <ajaxToolkit:CalendarExtender ID="Calendar1" runat="server" TargetControlID="txtClaimDate"   Format="MM/dd/yyyy">
           </ajaxToolkit:CalendarExtender>
+                                    <asp:RequiredFieldValidator ID="rqvClaimDate"
+                                                runat="server"
+                                                ControlToValidate="txtClaimDate"
+                                                ErrorMessage="Claim Date is Required"
+                                                SetFocusOnError="true"
+                                                BackColor="yellow">
+
+                    </asp:RequiredFieldValidator>
         </td>
       </tr>
       
@@ -141,6 +149,14 @@
          
           <ajaxToolkit:CalendarExtender ID="Calendar2" runat="server" TargetControlID="txtDueDate"   Format="MM/dd/yyyy">
           </ajaxToolkit:CalendarExtender>
+                           <asp:RequiredFieldValidator ID="rqvDueDate"
+                                                runat="server"
+                                                ControlToValidate="txtDueDate"
+                                                ErrorMessage="Due Date is Required"
+                                                SetFocusOnError="true"
+                                                BackColor="yellow">
+
+                    </asp:RequiredFieldValidator>
         </td>
       </tr>
       
@@ -153,6 +169,14 @@
         </td>
         <td>
           <asp:TextBox ID="txtAmount" runat="server"></asp:TextBox>
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
+                                                runat="server"
+                                                ControlToValidate="txtAmount"
+                                                ErrorMessage="Amount is Required"
+                                                SetFocusOnError="true"
+                                                BackColor="yellow">
+
+                    </asp:RequiredFieldValidator>
                    <asp:RegularExpressionValidator ID="RegNameClaim" runat="server"
                                           ControlToValidate="txtAmount"
                                           ValidationExpression="^\d+(\.\d\d)?$"

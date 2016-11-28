@@ -67,6 +67,15 @@ namespace AspWebForms.PlanView {
         protected global::System.Web.UI.WebControls.TextBox txtDescr;
         
         /// <summary>
+        /// rqvDescr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rqvDescr;
+        
+        /// <summary>
         /// RegNameDescr control.
         /// </summary>
         /// <remarks>
@@ -83,6 +92,15 @@ namespace AspWebForms.PlanView {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDetuc;
+        
+        /// <summary>
+        /// rqvDetuc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rqvDetuc;
         
         /// <summary>
         /// RegNameDetuc control.

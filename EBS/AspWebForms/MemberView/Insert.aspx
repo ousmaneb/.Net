@@ -135,6 +135,14 @@
                 </td>
                 <td>
                     <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="rqvLastName"
+                                                runat="server"
+                                                ControlToValidate="txtLastName"
+                                                ErrorMessage="Last Name is Required"
+                                                SetFocusOnError="true"
+                                                BackColor="yellow">
+
+                    </asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="RegLastName" runat="server"
                                                     ControlToValidate="txtLastName"
                                                     ValidationExpression="^[a-zA-Z'.]{1,10}$"
@@ -153,6 +161,14 @@
 
                     <ajaxToolkit:CalendarExtender ID="Calendar1" runat="server" TargetControlID="txtDateOfBirth" Format="MM/dd/yyyy">
                     </ajaxToolkit:CalendarExtender>
+                         <asp:RequiredFieldValidator ID="rqvDateOfBirth"
+                                                runat="server"
+                                                ControlToValidate="txtDateOfBirth"
+                                                ErrorMessage="Date of Birth is Required"
+                                                SetFocusOnError="true"
+                                                BackColor="yellow">
+
+                    </asp:RequiredFieldValidator>
 
 
                 </td>
@@ -164,6 +180,14 @@
                 </td>
                 <td>
                     <asp:TextBox ID="txtGender" runat="server"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="rqvGender"
+                                                runat="server"
+                                                ControlToValidate="txtGender"
+                                                ErrorMessage="Gender is Required"
+                                                SetFocusOnError="true"
+                                                BackColor="yellow">
+
+                    </asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="RegGender" runat="server"
                                                     ControlToValidate="txtGender"
                                                     ValidationExpression="^M(ale)?$|^F(emale)?$"
@@ -178,6 +202,14 @@
                 </td>
                 <td>
                     <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="rqvUserName"
+                                                runat="server"
+                                                ControlToValidate="txtUserName"
+                                                ErrorMessage="User Name is Required"
+                                                SetFocusOnError="true"
+                                                BackColor="yellow">
+
+                    </asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="RegUserName" runat="server"
                                                     ControlToValidate="txtUserName"
                                                     ValidationExpression="^[A-Za-z][A-Za-z0-9._]{5,14}$"

@@ -67,6 +67,15 @@ namespace AspWebForms.MemberView {
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
         
         /// <summary>
+        /// rqvLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rqvLastName;
+        
+        /// <summary>
         /// RegLastName control.
         /// </summary>
         /// <remarks>
@@ -94,6 +103,15 @@ namespace AspWebForms.MemberView {
         protected global::AjaxControlToolkit.CalendarExtender Calendar1;
         
         /// <summary>
+        /// rqvDateOfBirth control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rqvDateOfBirth;
+        
+        /// <summary>
         /// txtGender control.
         /// </summary>
         /// <remarks>
@@ -101,6 +119,15 @@ namespace AspWebForms.MemberView {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtGender;
+        
+        /// <summary>
+        /// rqvGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rqvGender;
         
         /// <summary>
         /// RegGender control.
@@ -119,6 +146,15 @@ namespace AspWebForms.MemberView {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUserName;
+        
+        /// <summary>
+        /// rqvUserName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rqvUserName;
         
         /// <summary>
         /// RegUserName control.

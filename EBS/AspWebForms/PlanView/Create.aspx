@@ -137,6 +137,13 @@
                 </td>
                 <td>
                     <asp:TextBox ID="txtDescr" Font-Size="Medium" runat="server"></asp:TextBox>
+                      <asp:RequiredFieldValidator ID="rqvDescr"
+                                                runat="server"
+                                                ControlToValidate="txtDescr"
+                                                ErrorMessage="Description is Required"
+                                                SetFocusOnError="true"
+                                                BackColor="yellow">
+                           </asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="RegNameDescr" runat="server"
                                                     ControlToValidate="txtDescr"
                                                     ValidationExpression="^[a-zA-Z''-'\s]{1,25}$"
@@ -151,6 +158,13 @@
                 </td>
                 <td>
                     <asp:TextBox ID="txtDetuc" Font-Size="Medium" runat="server"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="rqvDetuc"
+                                                runat="server"
+                                                ControlToValidate="txtDetuc"
+                                                ErrorMessage="Detuctible Value is Required"
+                                                SetFocusOnError="true"
+                                                BackColor="yellow">
+                           </asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="RegNameDetuc" runat="server"
                                                     ControlToValidate="txtDetuc"
                                                     ValidationExpression="^\d+(\.\d\d)?$"
