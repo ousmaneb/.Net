@@ -101,7 +101,7 @@ namespace PMCLibrary.DAL
         cmd.CommandType = System.Data.CommandType.StoredProcedure;
         conn.Open();
         result = cmd.ExecuteNonQuery() > 0 ? true : false;
-        conn.Close();
+        
       }
 
       catch (Exception ex)

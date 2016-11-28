@@ -20,6 +20,7 @@ namespace AspWebForms.ClaimView
 
 
         Calendar1.EndDate = DateTime.Today;
+        Calendar2.StartDate = DateTime.Today;
       }
     }
 

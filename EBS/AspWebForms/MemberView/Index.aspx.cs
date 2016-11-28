@@ -15,6 +15,7 @@ namespace AspWebForms.MemberView
       {
         BindData();
         BindData1();
+     
       }
     }
 
@@ -30,6 +31,7 @@ namespace AspWebForms.MemberView
       ddlPlan1.DataValueField = "PlanId";
       ddlPlan1.DataTextField = "PlanName";
       ddlPlan1.DataBind();
+     
     }
 
     private void BindData()
@@ -43,6 +45,7 @@ namespace AspWebForms.MemberView
     {
       GridView1.DataSource = new MemberAction().Get();
       GridView1.DataBind();
+      
     }
 
     protected void gvMember_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -65,6 +68,7 @@ namespace AspWebForms.MemberView
         ddlPlan.SelectedIndex = ddlPlan.Items.IndexOf(ddlPlan.Items.FindByText(lbl.Text));
 
         ViewState["Mem_id"] = gvMember.DataKeys[index].Value;
+       
 
         ModalPopupExtender1.Show();
       }
@@ -108,7 +112,10 @@ namespace AspWebForms.MemberView
       if (result)
         Label1.Text = "Member Has Been Updated Successfully!";
       else
-        Label1.Text = "Error to delete -> " + result;
+        Label1.Text = "Error to delete -> ";
+
+
+   
 
       BindData();
       udp.Update();
@@ -122,7 +129,7 @@ namespace AspWebForms.MemberView
       if (msg == true)
         Label1.Text = "Member Has Been Deleted Successfully!";
       else
-        Label1.Text = "Error to delete -> " + msg;
+        Label1.Text = "Error to delete -> ";
 
       BindData();
       udp.Update();

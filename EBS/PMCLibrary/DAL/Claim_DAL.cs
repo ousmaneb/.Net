@@ -135,6 +135,7 @@ namespace PMCLibrary.DAL
           obj.ClaimAmount = Convert.ToDouble(dr["Claim_Amount"]);
           obj.Member.FirstName = dr["FName"].ToString();
           obj.Member.Lastname = dr["LName"].ToString();
+          obj.Member.MemberId= Convert.ToInt32(dr["Mem_id"]);
 
           results.Add(obj);
         }
