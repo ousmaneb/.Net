@@ -17,3 +17,22 @@ C:\Eintern\1602-22\WcfApp\WcfApp.Client\bin\Microsoft.ApplicationInsights.xml
 C:\Eintern\1602-22\WcfApp\WcfApp.Client\obj\Debug\WcfApp.Client.csprojResolveAssemblyReference.cache
 C:\Eintern\1602-22\WcfApp\WcfApp.Client\obj\Debug\WcfApp.Client.dll
 C:\Eintern\1602-22\WcfApp\WcfApp.Client\obj\Debug\WcfApp.Client.pdb
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\ApplicationInsights.config
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\WcfApp.Client.dll.config
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\WcfApp.Client.dll
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\WcfApp.Client.pdb
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\Microsoft.AI.Web.dll
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\Microsoft.AI.Web.xml
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\obj\Debug\WcfApp.Client.csprojResolveAssemblyReference.cache
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\obj\Debug\WcfApp.Client.dll
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\WcfApp\WcfApp.Client\obj\Debug\WcfApp.Client.pdb

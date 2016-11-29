@@ -3,3 +3,4 @@ C:\Eintern\1602-22\RegistrationApp\RegistrationApp.Domain\bin\Debug\Registration
 C:\Eintern\1602-22\RegistrationApp\RegistrationApp.Domain\obj\Debug\RegistrationApp.Domain.csprojResolveAssemblyReference.cache
 C:\Eintern\1602-22\RegistrationApp\RegistrationApp.Domain\obj\Debug\RegistrationApp.Domain.dll
 C:\Eintern\1602-22\RegistrationApp\RegistrationApp.Domain\obj\Debug\RegistrationApp.Domain.pdb
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\RegistrationApp\RegistrationApp.Domain\obj\Debug\RegistrationApp.Domain.csprojResolveAssemblyReference.cache

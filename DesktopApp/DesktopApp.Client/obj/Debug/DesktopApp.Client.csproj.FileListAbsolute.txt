@@ -12,3 +12,11 @@ C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client.Prop
 C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client.csproj.GenerateResource.Cache
 C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client.exe
 C:\Eintern\1602-22\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client.pdb
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\DesktopApp\DesktopApp.Client\bin\Debug\DesktopApp.Client.exe.config
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client.exe
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client.pdb
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client.csprojResolveAssemblyReference.cache
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\DesktopApp\DesktopApp.Client\obj\Debug\MainWindow.g.cs
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\DesktopApp\DesktopApp.Client\obj\Debug\App.g.cs
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client_MarkupCompile.cache
+C:\Users\Barry\Documents\GitHub\DotNet Workspace\DesktopApp\DesktopApp.Client\obj\Debug\DesktopApp.Client_MarkupCompile.lref
