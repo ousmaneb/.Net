@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -11,8 +12,9 @@ namespace France
   public class World
   {
     private string Name;
-    private int Nb, Code, Longitude, Latitude;
-    private City[] tCity;
+    public int nb=1;
+    private int Code, Longitude, Latitude;
+    public static City[] tCity;
     private City city;
    // private Route[] routes;
 
@@ -40,7 +42,7 @@ namespace France
     //  return cityCollection;
     //}
 
-    public City[] load(String file)
+    public City[] Load(String file)
     {
       TextFile tf = new TextFile(file);
       int nb = tf.GetSize();
@@ -70,18 +72,18 @@ namespace France
       return tCity;
     }
 
-    public void loadRoute(string file)
+    public void LoadRoute(string file)
     {
       TextFile tf = new TextFile(file);
       Route [] routes = new Route[tf.GetSize()];
-      int r = 0;
+      //int r = 0;
 
       for (int i = 0; i < tf.GetSize(); i++)
       {
         String readline = tf.GetLine(i);
         var st = readline.Split(';');
-        int CityA = Convert.ToInt32(st[0]);
-        int CityB = Convert.ToInt32(st[1]);
+        int cityA = Convert.ToInt32(st[0]);
+        int cityB = Convert.ToInt32(st[1]);
         int distance = Convert.ToInt32(st[2]);
         Console.WriteLine((1 + i) + "/" + tf.GetSize());
         City citA = null;
@@ -89,11 +91,11 @@ namespace France
         int j = 0;
         while ((citA == null || citB == null) && j < tCity.Length)
         {
-          if (tCity[j].Code== CityA)
+          if (tCity[j].Code== cityA)
           {
             citA = tCity[j];
           }
-          else if (tCity[j].Code == CityB)
+          else if (tCity[j].Code == cityB)
           {
             citB = tCity[j];
           }
@@ -108,9 +110,9 @@ namespace France
     {
       int i = 0;
       bool find = false;
-      while (!find && i < Nb)
+      while (!find && i < nb)
       {
-        if (tCity[i].Name.equalsIgnoreCase(cityname))
+        if (string.Equals(tCity[i].Name.ToLower(),cityname.ToLower()))
           city = new City(tCity[i].Name, tCity[i].Code, tCity[i].Longitude, tCity[i].Latitude);
         else
           i++;
@@ -119,6 +121,16 @@ namespace France
     }
 
 
+    public City GetCityByPosition(int x, int y)
+    {
+      for (int i = 0; i < tCity.Length; i++)
+      {
+        Rectangle rec = new Rectangle(tCity[i].Latitude, tCity[i].Longitude, 4, 4);
+        if (rec.Contains(new Point(x, y)))
+          return tCity[i];
+      }
+      return null;
+    }
 
 
 

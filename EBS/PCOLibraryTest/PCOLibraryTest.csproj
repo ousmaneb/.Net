@@ -59,10 +59,6 @@
       <Project>{bda40b8e-ab3f-40a9-a23a-8e9f01e998da}</Project>
       <Name>Grades</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PCOLibrary\PCOLibrary.csproj">
-      <Project>{f5a091b5-5c7d-4c9e-b3a7-2beaa988df15}</Project>
-      <Name>PCOLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
