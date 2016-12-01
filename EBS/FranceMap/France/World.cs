@@ -16,61 +16,67 @@ namespace France
     private int Code, Longitude, Latitude;
     public static City[] tCity;
     private City city;
-   // private Route[] routes;
+    // private Route[] routes;
 
 
 
 
 
-    //public List<City> load_test(string file)
+    public List<City> LoadCities(string file)
+    {
+      List<City> cityCollection = new List<City>();
+
+      //int nb = 0; 
+      
+     
+
+      using (var f = new StreamReader(file))
+      {
+        string line = string.Empty;
+        while ((line = f.ReadLine()) != null)
+        {
+          var st = line.Split(';');
+          cityCollection.Add(new City(Convert.ToString(st[0]), Convert.ToInt32(st[1]), Convert.ToInt32(st[2]), Convert.ToInt32(st[3])));
+          
+        }
+      }
+      Console.WriteLine("The number of cities is: " + cityCollection.Count);
+      Console.WriteLine("Loading Finished! ");
+      Console.WriteLine();
+      Console.WriteLine();
+      return cityCollection;
+    }
+
+    //public City[] Load(String file)
     //{
-    //  List<City> cityCollection = new List<City>();
+    //  TextFile tf = new TextFile(file);
+    //  int nb = tf.GetSize();
 
-    //  int nb = cityCollection.Count();
-    //  Console.WriteLine("The number of cities is: "+nb);
+    //  Console.WriteLine("Number of the cities in the file city.txt: " + nb);
+    //  City [] tCity = new City[nb];
 
-    //  using (var f = new StreamReader(file))
+    //  for (int i = 0; i < nb; i++)
     //  {
-    //    string line = string.Empty;
-    //    while ((line = f.ReadLine()) != null)
+    //    using (var f = new StreamReader(file))
     //    {
-    //      var st = line.Split(';');
-    //      cityCollection.Add(new City(Convert.ToString(st[0]), Convert.ToInt32(st[1]), Convert.ToInt32(st[2]), Convert.ToInt32(st[3])));
+    //      string line = string.Empty;
+    //      while ((line = f.ReadLine()) != null)
+    //      {
+    //        var st = line.Split(';');
+    //        Name = Convert.ToString(st[0]);
+    //        Code = Convert.ToInt32(st[1]);
+    //        Longitude = Convert.ToInt32(st[2]);
+    //          Latitude = Convert.ToInt32(st[3]);
+            
+    //      }
     //    }
+    //    tCity[i] = new City(Name, Code, Longitude, Latitude);
+
     //  }
 
-    //  return cityCollection;
+    // Console.WriteLine("Loading Finished! ");
+    //  return tCity;
     //}
-
-    public City[] Load(String file)
-    {
-      TextFile tf = new TextFile(file);
-      int nb = tf.GetSize();
-
-      Console.WriteLine("Number of the cities in the file city.txt: " + nb);
-      City [] tCity = new City[nb];
-
-      for (int i = 0; i < nb; i++)
-      {
-        using (var f = new StreamReader(file))
-        {
-          string line = string.Empty;
-          while ((line = f.ReadLine()) != null)
-          {
-            var st = line.Split(';');
-            Name = Convert.ToString(st[0]);
-            Code = Convert.ToInt32(st[1]);
-            Longitude = Convert.ToInt32(st[2]);
-              Latitude = Convert.ToInt32(st[3]);
-            tCity[i] = new City(Name, Code, Longitude, Latitude);
-          }
-        }
-  
-      }
-
-     Console.WriteLine("Loading Finished! ");
-      return tCity;
-    }
 
     public void LoadRoute(string file)
     {

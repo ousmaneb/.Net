@@ -26,7 +26,7 @@ namespace France
           while ((s1 = sr.ReadLine()) != null)
             arraylist.Add(s1);
           s_size = arraylist.Count;
-          lines = (string[])arraylist.ToArray(new String[0].GetType());
+         // lines = (string[])arraylist.ToArray();
           sr.Close();
         }
 

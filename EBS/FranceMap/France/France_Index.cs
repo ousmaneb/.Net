@@ -15,6 +15,7 @@ namespace France
     public France_Index()
     {
       InitializeComponent();
+     
     }
   }
 }

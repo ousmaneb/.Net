@@ -1,0 +1,21 @@
+﻿
+
+.container {
+
+  padding: 15px;
+    vertical-align: baseline;
+}
+
+
+.label1 {
+  color: red;
+  
+  font: italic bold 12px/30px Georgia, serif;
+
+}
+
+.inputf {
+  align-content: center;
+  margin: auto;
+}
+

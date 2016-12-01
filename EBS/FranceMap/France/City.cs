@@ -37,5 +37,12 @@ namespace France
       Cities[NCities] = city;
       NCities++;
     }
+
+    
+    public override string ToString()
+    {
+      return Name + " " + Code + " " + Longitude + " " + Latitude;
+
+    }
   }
 }

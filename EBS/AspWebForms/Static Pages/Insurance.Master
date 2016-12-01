@@ -51,6 +51,7 @@
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
       <asp:ScriptManager ID="scrpt" runat="server"></asp:ScriptManager>
       <div class="brand">DK Insurance</div>
+
       <div class="address-bar">1 East 96th street | New York, NY 10026 | 123.456.7890</div>
 
       <!-- Navigation -->

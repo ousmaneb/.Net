@@ -14,39 +14,36 @@ namespace France
     [STAThread]
     static void Main()
     {
-      World w = new World();
+
 
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
 
-      // Application.Run(new France_Index());
+      Application.Run(new France_Index());
+
 
       //MessageBox.Show(World.tCity.Length.ToString());
 
-      Console.WriteLine(w.Load("city.txt"));
-     
 
-      //for (int i = 0; i < World.tCity.Length; i++)
+
+      //public static void Main(string[] arg)
       //{
-      //  MessageBox.Show(World.tCity[i].ToString());
+      //  //World map = new World();
+      //  //City [] t = map.Load("C:/Users/Barry/Documents/GitHub/DotNet Workspace/EBS/FranceMap/France/Files/city.txt");
+      //  //for (var i = 0; i < t.Length; i++)
+      //  //  Console.WriteLine(t[i]);
+      //  //Console.ReadKey();
+
+
+      //  World w = new World();
+      //  var t = w.LoadCities("C:/Users/Barry/Documents/GitHub/DotNet Workspace/EBS/FranceMap/France/Files/city.txt");
+
+      //  for (var i = 0; i < t.Count; i++)
+      //    Console.WriteLine(t[i]);
+      // Console.ReadKey();
+
       //}
-      
-      //Console.ReadLine();
-
-
-
-
+  
     }
   }
-
-
-  //class Program
-  //{
-  //  static void Main()
-  //  {
-  //    World w = new World();
-
-  //    Console.WriteLine(w.Load("city.txt"));
-  //    Console.ReadLine();
-  //  }
-  }
+}
