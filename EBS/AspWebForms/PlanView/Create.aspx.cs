@@ -32,11 +32,10 @@ namespace AspWebForms.PlanView
 
       model.DetuctibleValue = Convert.ToDouble(txtDetuc.Text);
 
-      if (actionobj.Insert(model) == true)
+      if (actionobj.Insert(model))
         lblResult.Text = "Plan Has Been Added Successfully! ";
       else
         lblResult.Text = "Plan Is Not Added ";
-
     }
   }
 }

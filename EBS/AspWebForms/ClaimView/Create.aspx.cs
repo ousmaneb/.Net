@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using PMCLibrary.BAL.Actions;
-//using PMCLibrary.BAL.Actions;
 using PMCLibrary.BAL.Model;
+//using PMCLibrary.BAL.Actions;
 
 namespace AspWebForms.ClaimView
 {
-  public partial class Create : System.Web.UI.Page
+  public partial class Create : Page
   {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -35,8 +31,6 @@ namespace AspWebForms.ClaimView
 
     protected void btnCreate_Click(object sender, EventArgs e)
     {
-
-
       int val;
       var r = int.TryParse(txtAmount.Text, out val);
       if (!r)
@@ -48,10 +42,9 @@ namespace AspWebForms.ClaimView
         Convert.ToDouble(txtAmount.Text));
 
 
-
       var result = new ClaimAction().Insert(model);
 
-      if (result == true)
+      if (result)
         lblResult.Text = "Claim Has Been Added Successfully! ";
       else
         lblResult.Text = "Claim Is Not Added ";

@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="AspWebForms.Users.Register" MasterPageFile="~/Static Pages/Insurance.Master"%>
 
 <asp:Content ID="ControlId" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-  <div  style="text-align: center">
+  <div style="text-align: center">
     <h4 style="font-size: medium">Register a new user</h4>
     <hr/>
     <p>

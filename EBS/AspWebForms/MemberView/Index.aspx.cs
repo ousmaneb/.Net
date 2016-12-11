@@ -15,7 +15,6 @@ namespace AspWebForms.MemberView
       {
         BindData();
         BindData1();
-     
       }
     }
 
@@ -31,7 +30,6 @@ namespace AspWebForms.MemberView
       ddlPlan1.DataValueField = "PlanId";
       ddlPlan1.DataTextField = "PlanName";
       ddlPlan1.DataBind();
-     
     }
 
     private void BindData()
@@ -45,7 +43,6 @@ namespace AspWebForms.MemberView
     {
       GridView1.DataSource = new MemberAction().Get();
       GridView1.DataBind();
-      
     }
 
     protected void gvMember_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -68,7 +65,7 @@ namespace AspWebForms.MemberView
         ddlPlan.SelectedIndex = ddlPlan.Items.IndexOf(ddlPlan.Items.FindByText(lbl.Text));
 
         ViewState["Mem_id"] = gvMember.DataKeys[index].Value;
-       
+
 
         ModalPopupExtender1.Show();
       }
@@ -85,7 +82,7 @@ namespace AspWebForms.MemberView
         username1.Text = row.Cells[5].Text;
         BindDropDown();
 
-        var lbl1 = (Label)row.FindControl("lblName");
+        var lbl1 = (Label) row.FindControl("lblName");
         ddlPlan.SelectedIndex = ddlPlan.Items.IndexOf(ddlPlan.Items.FindByText(lbl1.Text));
 
         ViewState["Mem_id"] = gvMember.DataKeys[index].Value;
@@ -115,18 +112,16 @@ namespace AspWebForms.MemberView
         Label1.Text = "Error to delete -> ";
 
 
-   
-
       BindData();
       udp.Update();
     }
 
     protected void btnDelete_Click(object sender, EventArgs e)
     {
-     bool msg =  Member_DAL.Delete(Convert.ToInt32(ViewState["Mem_id"]));
+      var msg = Member_DAL.Delete(Convert.ToInt32(ViewState["Mem_id"]));
 
 
-      if (msg == true)
+      if (msg)
         Label1.Text = "Member Has Been Deleted Successfully!";
       else
         Label1.Text = "Error to delete -> ";
@@ -137,13 +132,10 @@ namespace AspWebForms.MemberView
 
     protected void btnUCancel_Click(object sender, EventArgs e)
     {
-     
     }
 
     protected void btnDCancel_Click(object sender, EventArgs e)
     {
-
     }
-
   }
 }

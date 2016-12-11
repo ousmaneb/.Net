@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Web.UI;
 using PMCLibrary.BAL.Actions;
-using PMCLibrary.BAL.Actions.Interface;
 using PMCLibrary.BAL.Model;
 
 namespace AspWebForms.MemberView
@@ -12,7 +11,7 @@ namespace AspWebForms.MemberView
     {
       if (!IsPostBack)
       {
-        BindDropDown();       
+        BindDropDown();
         Calendar1.EndDate = DateTime.Today;
       }
     }
@@ -28,8 +27,8 @@ namespace AspWebForms.MemberView
 
     protected void btnCreate_Click(object sender, EventArgs e)
     {
-     // var model1 = new MemberModel();
-     // IAction<MemberModel> actionobj = new MemberAction();
+      // var model1 = new MemberModel();
+      // IAction<MemberModel> actionobj = new MemberAction();
 
       var model = new MemberModel(Convert.ToInt32(ddlPlan.SelectedValue),
         txtFirstName.Text,
@@ -38,7 +37,9 @@ namespace AspWebForms.MemberView
         txtGender.Text,
         txtUserName.Text);
 
-      if (txtFirstName.Text == string.Empty || txtLastName.Text == string.Empty|| txtDateOfBirth.Text == string.Empty|| txtGender.Text == string.Empty|| txtUserName.Text == string.Empty)
+      if ((txtFirstName.Text == string.Empty) || (txtLastName.Text == string.Empty) ||
+          (txtDateOfBirth.Text == string.Empty) || (txtGender.Text == string.Empty) ||
+          (txtUserName.Text == string.Empty))
       {
         txtFirstName.Text = "";
         txtLastName.Text = "";
@@ -50,12 +51,11 @@ namespace AspWebForms.MemberView
       {
         var result = new MemberAction().Insert(model);
 
-        if (result == true)
+        if (result)
           lblResult.Text = "Member Has Been Added Successfully! ";
         else
           lblResult.Text = "Member Is Not Added ";
-      }           
+      }
     }
-
   }
 }

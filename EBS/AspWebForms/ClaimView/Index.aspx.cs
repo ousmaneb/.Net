@@ -58,29 +58,25 @@ namespace AspWebForms.ClaimView
 
     protected void gvClaim_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-      int index = Convert.ToInt32(e.CommandArgument);
+      var index = Convert.ToInt32(e.CommandArgument);
       if (e.CommandName == "EditRow")
       {
         //Get the value of command argument, i.e cuurent row index.
 
-       GridViewRow row = gvClaim.Rows[index];
+        var row = gvClaim.Rows[index];
         txtClaimDate.Text = row.Cells[1].Text;
         txtDueDate.Text = row.Cells[2].Text;
         txtAmount.Text = row.Cells[3].Text;
         BindDropDown();
 
-        Label lbl1 = (Label) row.FindControl("lblFirstName");
+        var lbl1 = (Label) row.FindControl("lblFirstName");
         ddlFirstName.SelectedIndex = ddlFirstName.Items.IndexOf(ddlFirstName.Items.FindByText(lbl1.Text));
         ViewState["Claim_id"] = gvClaim.DataKeys[index].Value;
 
 
-
-
-
-        Label lbl2 = (Label)row.FindControl("lblLastName");
+        var lbl2 = (Label) row.FindControl("lblLastName");
         ddlLastName.SelectedIndex = ddlLastName.Items.IndexOf(ddlLastName.Items.FindByText(lbl2.Text));
         ViewState["Claim_id"] = gvClaim.DataKeys[index].Value;
-
 
 
         ModalPopupExtender1.Show();
@@ -89,24 +85,20 @@ namespace AspWebForms.ClaimView
       {
         //Get the value of command argument, i.e cuurent row index.
 
-        GridViewRow row = gvClaim.Rows[index];
+        var row = gvClaim.Rows[index];
         txtClaimDate1.Text = row.Cells[1].Text;
         txtDueDate1.Text = row.Cells[2].Text;
         txtAmount1.Text = row.Cells[3].Text;
         BindDropDown();
 
-        Label lbl3 = (Label)row.FindControl("lblFirstName");
+        var lbl3 = (Label) row.FindControl("lblFirstName");
         ddlFirstName1.SelectedIndex = ddlFirstName1.Items.IndexOf(ddlFirstName1.Items.FindByText(lbl3.Text));
         ViewState["Claim_id"] = gvClaim.DataKeys[index].Value;
 
 
-
-
-
-        Label lbl4 = (Label)row.FindControl("lblLastName");
+        var lbl4 = (Label) row.FindControl("lblLastName");
         ddlLastName1.SelectedIndex = ddlLastName1.Items.IndexOf(ddlLastName1.Items.FindByText(lbl4.Text));
         ViewState["Claim_id"] = gvClaim.DataKeys[index].Value;
-
 
 
         ModalPopupExtender2.Show();
@@ -115,7 +107,7 @@ namespace AspWebForms.ClaimView
 
     protected void btnUpdate_Click(object sender, EventArgs e)
     {
-      ClaimModel obj = new ClaimModel();
+      var obj = new ClaimModel();
 
       obj.ClaimDate = Convert.ToDateTime(txtClaimDate.Text).ToShortDateString();
       obj.DueDate = Convert.ToDateTime(txtDueDate.Text).ToShortDateString();
@@ -129,10 +121,10 @@ namespace AspWebForms.ClaimView
 
       obj.ClaimId = Convert.ToInt32(ViewState["Claim_id"]);
 
-      bool result = new ClaimAction().Update(obj);
+      var result = new ClaimAction().Update(obj);
 
 
-      if (result==true)
+      if (result)
         Label1.Text = "Claim Has Been Updated Successfully!";
       else
         Label1.Text = "Error to delete -> " + result;
@@ -144,10 +136,10 @@ namespace AspWebForms.ClaimView
 
     protected void btnDelete_Click(object sender, EventArgs e)
     {
-     bool msg = Claim_DAL.Delete(Convert.ToInt32(ViewState["Claim_id"]));
+      var msg = Claim_DAL.Delete(Convert.ToInt32(ViewState["Claim_id"]));
 
 
-      if (msg == true)
+      if (msg)
         Label1.Text = "Claim Has Been Deleted Successfully!";
       else
         Label1.Text = "Error -> " + msg;
@@ -157,6 +149,7 @@ namespace AspWebForms.ClaimView
 
       udp.Update();
     }
+
     protected void btnUCancel_Click(object sender, EventArgs e)
     {
     }
